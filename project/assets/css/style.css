@@ -1,0 +1,321 @@
+*{
+    margin-left:0px;
+    margin-right: 0px;
+}
+header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+.logo{
+    height:80px;
+    width:150px;
+    margin-left: 80px;
+}
+.search_input_logo{
+    display:flex;
+    flex-direction: row;
+    height:30px;
+    margin-left: 40px;
+    border-radius: 0px;
+    margin-right: -30px;
+    margin-top: 15px;
+}
+.search_box{
+    width:300px;
+    border-radius: 0px;
+    border-color: gray;
+}
+.search_logo{
+    height:25px;
+}
+.search_button{
+    border-radius: 0px;
+    border-color: gray;
+}
+.Login_Register{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style: none;
+    margin:10px;
+    margin-right:30px;
+    padding:10px;
+    color:tomato;
+}
+.login_register{
+    text-decoration: none;
+    margin-top: auto;
+}
+.login{
+    margin-right:30px;
+}
+.section_background{
+    background-image:url(../images/donation-banner.jpg) ;
+    height:700px;
+    display: flex;
+    margin:0px;
+}
+.section {
+    margin: auto;
+    margin-top:100px;
+}
+.section_h1 {
+    font-size: 3.5pc;
+    
+}
+.section_h1_sub{
+    font-size:1cm;
+    margin-left: 14pc;
+}
+.slogan{
+    margin-left: 15px;
+}
+.section_h2 {
+    margin-left: 20pc;
+}
+.button_P_F{
+    margin-left: 25pc;
+   
+}
+.Button_petition{
+    background-color:gray ;
+    margin-left: 10px;
+    height:1cm;
+    text-decoration: none;
+    color:white;
+}
+.Button_petition:hover{
+    color: white;
+    background-color: tomato;
+}
+.Button_fundraiser{
+    background-color:gray ;
+    margin-left:10px;
+    height:1cm;
+    text-decoration: none;
+    color:white;
+
+}
+.Button_fundraiser:hover{
+    color: white;
+    background-color: tomato;
+}
+.people_profile{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left:7pc;
+    margin-top: 20px;
+}
+.profiles {
+    margin:50px;
+    border-radius: 1px;
+    width:20pc;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.profiles:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transform: scale(1.05);
+}
+
+.content{
+    padding:10px;
+}
+.funded_backers{
+
+    display:flex;
+    flex-direction: column;
+    margin:30px;
+    margin-top: 5px;
+    
+}
+.persentage{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    margin:4px;
+   
+}
+.persentage_space{
+    margin-left:10px;
+    margin-right: 10px;
+}
+.content_F_B{
+    display:flex;
+    flex-direction: row;
+    margin:10px;
+    border-bottom: 1px solid gray;
+}
+.DAYS_left{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin:4px;
+    background-color: tomato;
+}
+.days_left_p{
+    margin-left: 80px;
+    
+}
+.profile_info{
+    text-decoration: none;
+    color: black;
+}
+.profiles_row_one{
+    display: flex;
+    flex-direction: row;
+}
+.profiles_row_two{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.feature_heading{
+    padding: 10px;
+}
+.F_heading{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid gray ;
+    width:300px;
+    margin-left: 36pc;
+}
+.explore {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+ 
+    
+}
+.Explore_column{
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    
+}
+
+.explore_button {
+    color:rgb(0, 0, 0);
+    margin-top:25% ;
+    text-decoration: none;
+    font-size: 1.5pc;
+    
+}
+.choise_name:hover{
+    color: white;
+    transform: scale(1.5);
+   
+}
+.choise:hover {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transform: scale(1.05);
+}
+.animal_welfare{
+    display:flex;
+    justify-content: center;
+    border-color: 1px solid gray;
+    background-image: url(../images/holy-cow.jpg);
+    width:250px;
+    height:150px;
+    margin-top: 30px;
+    
+
+}
+.education{
+    display:flex;
+    justify-content: center;
+    border-color: 1px solid gray;
+    background-image: url(../images/education.jpg);
+    width:250px;
+    height:150px;
+    margin-top:50px;
+    
+    
+}
+
+.children_welfar{
+    display:flex;
+    justify-content: center;
+    border-color: 1px solid gray;
+    background-image: url(../images/children.jpg);
+    width:250px;
+    height:150px;
+    margin-top:30px;
+
+}
+.medical_causes{
+    display:flex;
+    justify-content: center;
+    border-color: 1px solid gray;
+    background-image: url(../images/medical-clinic.jpg);
+    width:250px;
+    height:150px;
+    margin-top:50px;
+
+}
+.natural_disaster{
+    display:flex;
+    justify-content: center;
+    border-color: 1px solid gray;
+    background-image: url(../images/naturaldisasters.jpg);
+    width:250px;
+    height:150px;
+    margin-top:30px;
+
+}
+.temple_welfare{
+    display:flex;
+    justify-content: center;
+    border-color: 1px solid gray;
+    background-image: url(../images/temple.jpg);
+    width:250px;
+    height:150px;
+    margin-top:50px;
+}
+.footer_section1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:black;
+    margin-top: 40px;
+    margin-bottom: 0px;
+   
+}
+.footer_logo{
+    height:80px;
+    width:150px;
+    margin-left: 100px;
+    margin: 30px;
+    border-radius: 1em;
+}
+.contact{
+    margin-top: 50px;
+    display: flex;
+    
+}
+.instagram_fb{
+    
+    display: flex;
+    margin: 5px;
+}
+.footer_contact{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    list-style: none;
+    color:white;
+}
+.footer_contact_list{
+    list-style: none;
+}
+.footer_section2{
+    background-color: black;
+    color: white;
+    border-top:2px solid white ;
+    margin-bottom: -6px;
+    
+}
