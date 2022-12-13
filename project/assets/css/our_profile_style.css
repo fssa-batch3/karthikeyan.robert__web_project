@@ -29,5 +29,53 @@
     margin-top: 8px;
 
 }
+.dashboard{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.welcome_name{
+    color: grey;
 
-
+}
+.welcome_tagline{
+    width: 40%;
+    margin-left: 10px;
+    font-size: large;
+    background-color: silver;
+    border: 1px solid black;
+}
+.history_1{
+    padding: 10px;
+    margin-top: 20px;
+    border:2px solid gray ;
+    
+}
+.column_1{
+    color: gray;
+    border-bottom: 2px solid gray;
+}
+.column_2{
+    width: 100%;
+   
+    display: flex;
+    justify-content: space-between;
+}
+.listhead{
+    background-color: #f4f3f8;
+    color: gray;
+    height: 30px;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    
+} 
+.list_heading{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    margin-right: 750px;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}

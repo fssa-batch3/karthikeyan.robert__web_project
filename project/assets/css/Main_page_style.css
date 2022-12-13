@@ -54,45 +54,33 @@ header{
     height:700px;
     display: flex;
     margin:0px;
-
+    font-family: 'Yeseva One', cursive;
+   
 }
 .section {
     margin: auto;
-    margin-top:50px;
+    margin-top:100px;
 }
 .section_h1 {
-    font-size: 4pc;
+    font-size: 3.5pc;
     
+  
 }
 .section_h1_sub{
     font-size:1cm;
-    margin-left: 17pc;
+    margin-left: 7pc;
 }
 .slogan{
     margin-left: 15px;
 }
 .section_h2 {
-    margin-left: 25pc;
+    margin-left: 15pc;
 }
 .button_P_F{
-    margin-left: 30pc;
+    margin-left: 22pc;
    
 }
-.Button_petition{
-    background-color:tomato ;
-    margin-left: 10px;
-    height:1cm;
-    text-decoration: none;
-    color:black;
-}
-.Button_fundraiser{
-    background-color:tomato ;
-    margin-left:10px;
-    height:1cm;
-    text-decoration: none;
-    color:black;
 
-}
 .people_profile{
     
     display: flex;
