@@ -27,7 +27,7 @@
 <body>
     <div class="information_page">
         <h2 class="heading">
-            Start Petition
+            Start a campaign
         </h2>
         <div class="first_page">
             <div class="info_story"><img src="../assets/images/accept.png" width="50px" height="50px" class="" />
@@ -36,14 +36,14 @@
             </div>
             <div class="dash"><b>__________________________________</b></div>
             <div class="info_story">
-                <img src="../assets/images/accept.png" width="50px" height="50px" class="" />
+                <img src="../assets/images/right-arrow.png" width="50px" height="50px" class="" />
                 <div class="info_story_p">
                     Story
                 </div>
               </div>
               <div class="dash"><b>__________________________________</b></div>
               <div class="info_story">
-                <img src="../assets/images/right-arrow.png" width="50px" height="50px" class="" />
+                <img src="../assets/images/rec.png" width="50px" height="50px" class="" />
                 <div class="info_story_p">
                     Done
                 </div>
@@ -53,42 +53,22 @@
         <div class="Info">
             
             <div class="Basic_info">
-                Goal
-                <input type="number"  class="option input_option" />
-            
+                Description<textarea class="basic input_option"> </textarea>
             </div>
-            <div class="Basic_info">
-                End date 
-                <input placeholder id="end_date" value aria-invalid="false" class="title input_option"/>
-
-            </div>
-            <div class="end_method Basic_info">
-                Campaign End Method 
-                <div class="radio">
-                    <lable class="m_radio">
-                    <input type="radio" value="goal_achieve" name="end_goal">
-                    After Goal Achievement
-                    <span></span>
-                    </lable>
-                    <lable class="m_radio">
-                        <input type="radio" value="end_date" name="end_goal" >
-                        After End Date
-                        <span></span>
-                    </lable>
-                        <span>
-                            <p style="color: tomato; font-size: smaller;" >
-                                how you want to complete your Campaign
-                            </p>    
-                        </span>
-
-                </div>
+            <div class="featured_image">
+                <lable class="image_title">Featured Image</lable>
+                <div class="image_button">
+                    
+                    <input placeholder="choose an image" class=" title input_option"/>
+                    <input type="file" name="featured_image" class="choose_image" id="customfile" accept="image/*" >
+                </div>    
 
             </div>
         </div>
         <div   class="back_save ">
-            <a href="../petition/petition_page_2.html" ><button class="back">BACK</button></a>
+            <a href="../petition/fundraiser_page_1.html" ><button class="back">BACK</button></a>
             
-            <a href="#"><button  class="submit save save_continue"> SUBMIT</button></a>
+            <a href="../petition/fundraiser_page_3.html"><button  class="save save_continue"> Save & Continue</button></a>
              
         </div>
         

@@ -27,23 +27,23 @@
 <body>
     <div class="information_page">
         <h2 class="heading">
-            Start Petition
+            Start a Campaign
         </h2>
         <div class="first_page">
-            <div class="info_story"><img src="../assets/images/accept.png" width="50px" height="50px" class="" />
+            <div class="info_story"><img src="../assets/images/right-arrow.png" width="50px" height="50px" class="" />
                 <div class="info_story_p">Info
                 </div>
             </div>
             <div class="dash"><b>__________________________________</b></div>
             <div class="info_story">
-                <img src="../assets/images/accept.png" width="50px" height="50px" class="" />
+                <img src="../assets/images/rec.png" width="50px" height="50px" class="" />
                 <div class="info_story_p">
                     Story
                 </div>
               </div>
               <div class="dash"><b>__________________________________</b></div>
               <div class="info_story">
-                <img src="../assets/images/right-arrow.png" width="50px" height="50px" class="" />
+                <img src="../assets/images/rec.png" width="50px" height="50px" class="" />
                 <div class="info_story_p">
                     Done
                 </div>
@@ -51,45 +51,38 @@
             
         </div>
         <div class="Info">
-            
             <div class="Basic_info">
-                Goal
-                <input type="number"  class="option input_option" />
-            
+                Short Description<textarea class="basic input_option"> </textarea>
             </div>
             <div class="Basic_info">
-                End date 
-                <input placeholder id="end_date" value aria-invalid="false" class="title input_option"/>
+                *Category 
+                <input type="text" list="count" class="option input_option" />
+            
+                <datalist id="count">
+                    <option>Animal welfare</option>
+                    <option>Children</option>
+                    <option>Education</option>
+                    <option>Temple & Culture</option>
+                    <option>Medical causes</option>
+                    <option>Natural Disaster </option>
+                    
+                </datalist>
+            </div>
+            <div class="Basic_info">
+                *Title 
+                <input placeholder="keep your title within 200 characters" class="title input_option"/>
 
             </div>
-            <div class="end_method Basic_info">
-                Campaign End Method 
-                <div class="radio">
-                    <lable class="m_radio">
-                    <input type="radio" value="goal_achieve" name="end_goal">
-                    After Goal Achievement
-                    <span></span>
-                    </lable>
-                    <lable class="m_radio">
-                        <input type="radio" value="end_date" name="end_goal" >
-                        After End Date
-                        <span></span>
-                    </lable>
-                        <span>
-                            <p style="color: tomato; font-size: smaller;" >
-                                how you want to complete your Campaign
-                            </p>    
-                        </span>
-
-                </div>
+            <div class="Basic_info">
+                Campaigner Name <input type="text" class="name input_option" />
 
             </div>
+            
         </div>
-        <div   class="back_save ">
-            <a href="../petition/petition_page_2.html" ><button class="back">BACK</button></a>
-            
-            <a href="#"><button  class="submit save save_continue"> SUBMIT</button></a>
-             
+        <div   class="continue">
+            <center>
+                <a href="../petition/fundraiser_page_2.html"><button  class="save_continue"> Save & Continue</button></a>
+            </center>    
         </div>
         
 
