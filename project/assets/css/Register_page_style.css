@@ -46,10 +46,13 @@ header{
 .login_register{
     text-decoration: none;
     margin-top: auto;
-}
-.login{
+    margin-bottom: 10px;
     margin-right:30px;
+    font-size: x-large;
+    font-family: 'Rajdhani', sans-serif;
+    color:tomato;
 }
+
 *{
     outline:none;
     box-sizing:border-box;
