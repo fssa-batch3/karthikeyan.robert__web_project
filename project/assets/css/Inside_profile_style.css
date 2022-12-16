@@ -22,14 +22,14 @@ header{
 .search_box{
     width:300px;
     border-radius: 0px;
-    border-color: tomato;
+    border-color: gray;
 }
 .search_logo{
     height:25px;
 }
 .search_button{
     border-radius: 0px;
-    border-color: tomato;
+    border-color: gray;
 }
 .Login_Register{
     display:flex;
