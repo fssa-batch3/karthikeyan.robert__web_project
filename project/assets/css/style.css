@@ -58,7 +58,7 @@ header{
 }
 
 .section_background{
-    background-image:url(../images/donation-banner.jpg) ;
+    background-image: url(../images/donation-banner.jpg) ;
     height:700px;
     display: flex;
     margin:0px;
@@ -89,22 +89,26 @@ header{
    
 }
 .Button_petition{
-    background-color:gray ;
+    background-color: gray;
     margin-left: 10px;
+    border-radius:0.5em;
+    border: 2px solid gray;
     height:1cm;
     text-decoration: none;
     color:white;
 }
 .Button_petition:hover{
-    color: white;
+    color: black;
     background-color: tomato;
 }
 .Button_fundraiser{
-    background-color:gray ;
+   background-color: gray;
     margin-left: 13px;
+    border-radius:0.5em;
+    border: 2px solid gray;
     height:1cm;
     text-decoration: none;
-    color:white;
+    color:black;
 
 }
 .Button_fundraiser:hover{

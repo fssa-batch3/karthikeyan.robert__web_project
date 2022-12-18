@@ -79,3 +79,9 @@
     padding: 10px;
     border-bottom: 1px solid gray;
 }
+.log_out{
+    height:40px;
+    width:35px;
+    margin-right: 5px;
+    margin-top:-1px;
+}

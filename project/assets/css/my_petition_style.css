@@ -55,7 +55,9 @@
     
     
 }
-
+.log_out{
+    margin-top: -1px;
+}
 
 .footer{
     margin-top: 500px;
