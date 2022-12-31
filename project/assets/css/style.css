@@ -8,7 +8,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
-    
+   
 }
 .logo{
     height:80px;
@@ -59,7 +59,8 @@ header{
 
 .section_background{
     background-image: url(../images/donation-banner.jpg) ;
-    height:700px;
+    height:800px;
+    background-size: 100%;
     display: flex;
     margin:0px;
     font-family: 'Yeseva One', cursive;
@@ -67,52 +68,58 @@ header{
 }
 .section {
     margin: auto;
-    margin-top:100px;
+    margin-top:150px;
 }
 .section_h1 {
     font-size: 3.5pc;
-    
+    color: rgba(240, 248, 255, 0.827);
   
 }
 .section_h1_sub{
     font-size:1cm;
     margin-left: 7pc;
+    color: rgba(240, 248, 255, 0.827);
 }
 .slogan{
     margin-left: 15px;
+    color: rgba(240, 248, 255, 0.827);
 }
 .section_h2 {
     margin-left: 15pc;
+    color: rgba(240, 248, 255, 0.827);
 }
 .button_P_F{
     margin-left: 22pc;
    
 }
 .Button_petition{
-    background-color: gray;
+    background-color: rgba(255, 255, 255, 0.482);
     margin-left: 10px;
     border-radius:0.5em;
     border: 2px solid gray;
     height:1cm;
     text-decoration: none;
-    color:white;
+    color: black;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
 }
 .Button_petition:hover{
     color: black;
     background-color: tomato;
 }
 .Button_fundraiser{
-   background-color: gray;
+  background-color: rgba(255, 255, 255, 0.482);
     margin-left: 13px;
     border-radius:0.5em;
     border: 2px solid gray;
     height:1cm;
     text-decoration: none;
-    color:black;
+    color:black;transition: all 0.3s ease-in;
+    cursor: pointer;
 
 }
 .Button_fundraiser:hover{
-    color: white;
+    color: black;
     background-color: tomato;
 }
 .people_profile{
@@ -128,6 +135,8 @@ header{
     border-radius: 1px;
     width:20pc;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
 }
 
 .profiles:hover {
