@@ -25,38 +25,42 @@
     <div id="login"  class="center">
         <div class="container">
          <div class="title">Register </div>
-      <form action="#">
+      <form action="#" role="form" onsubmit="signUp(event);">
       <div class="data">
         <div class="input">
             <label>Full Name</label>
-            <input type="text" id="Name" required="true" placeholder="Full Name*" class="placeholder">
+            <input type="text" id="name" required="true" placeholder="Full Name*" class="placeholder" >
        </div> 
           <div class="input">
               <label>Email Id</label>
-              <input type="text" id="number or email id" required="true" placeholder="Email id* " class="placeholder">
+              <input type="text" id="email" required="true" placeholder="Email id* " class="placeholder" >
          </div>
             
             <div class="input">
                 <label>Phone Number</label>
-                <input type="text" id="number or email id" required="true" placeholder="Phone number* " class="placeholder">
+                <input type="text" id= "number" required="true" placeholder="Phone number* " class="placeholder" > 
             </div>
          <div class="input">
             <label>Password</label>
             <input 
+            id="password"
+            
             type="password" 
             placeholder="password*" 
-            required="true" class="placeholder"/>
+            required="true" class="placeholder" />
          </div>
          <div class="input">
             <label> Conform Password</label>
             <input 
+                id="conform_password"
+                
                 type="password" 
 				placeholder="Conform password*" 
 				required="true" class="placeholder"/>
          </div>
          <div class="create_account">
-            <button>
-                <a href="../Main_page.html" class="create_account">REGISTER</a>
+            <button type="submit"   class="create_account">
+                    REGISTER 
             </button>
 
         </div>
@@ -108,6 +112,61 @@
 
 
     </footer>
+    <!-- <script> -->
+
+        <!-- // function getData(){
+        //     event.preventDefault();
+
+
+        // const name = document.getElementById("name").value 
+        // const email = document.getElementById("email").value 
+        // const number = document.getElementById("number").value
+        // const password = document.getElementById("password").value 
+        // const conform_password =document.getElementById("conform_password").value 
+
+
+        // console.log(name)       
+        // console.log(email)
+        // console.log(number)
+        // console.log(password)
+        // console.log(conform_password)
+
+        // localStorage.setItem("name" , name)
+        // localStorage.setItem("email" , email)
+        // localStorage.setItem("number" , number)
+        // localStorage.setItem("password" , password)
+        // localStorage.setItem("conform_password" , conform_password )
+            
+
+        // window.location.href ="../Main_page.html"
+
+        // }     -->
+        <!-- <script type="text/javascript">
+            const signup = e => {
+             let formData = JSON.parse(localStorage.getItem('formData')) || [];
+
+            formData.push({
+            name: document.getElementById('name').value,
+            number: document.getElementById("number").value, 
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value,
+            conform_password: document.getElementById('conform_password').value,
+
+            });
+
+            localStorage.setItem('formData', JSON.stringify(formData));
+            //console.log(localStorage.getItem("formData"));
+            dispData();
+            e.preventDefault();
+            
+            } -->
+        
+            <script src="../assets/script.js" />
+
+
+
+           
+    
 
 </body>
 

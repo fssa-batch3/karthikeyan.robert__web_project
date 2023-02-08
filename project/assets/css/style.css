@@ -59,6 +59,10 @@ header{
 
 .section_background{
     background-image: url(../images/donation-banner.jpg) ;
+    background-position-y: 0;
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height:800px;
     background-size: 100%;
     display: flex;
@@ -198,11 +202,9 @@ header{
     padding: 10px;
 }
 .F_heading{
-    display: flex;
-    justify-content: center;
-    border-bottom: 2px solid gray ;
-    width:300px;
-    margin-left: 36pc;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 .explore {
     display:flex;
@@ -341,4 +343,94 @@ header{
 }
 .copyrights{
     margin-left: 23%;
+}
+
+/* responsive */
+
+@media only screen and (max-width:420px) {
+    header{
+        height:50px;
+    }   
+    .search_input_logo{
+        display: none;
+    }
+    .logo{
+        height:100%;
+        width:100%;
+        margin-left: 0;
+    }
+    .Login_Register{
+        padding:0;
+        margin-right: 0px;
+        
+    }
+    .login_register {
+        font-size:15px;
+    }
+    .profiles_row_one{
+        flex-direction: column;
+    }
+    .section_background {
+        background-image: url(../images/donation-banner.jpg);
+        background-position-y: 0; 
+        background-position-x: center;
+        
+        background-repeat: no-repeat;
+        height: 50%; 
+        background-size: 150%; 
+        display: flex; 
+        margin: 0px;
+        font-family: 'Yeseva One', cursive;
+    }
+    .section {
+        margin: 0px;
+        margin-top: 0px;
+    }
+    .section_h1 {
+        font-size: xx-large;
+         color: rgba(0, 0, 0, 0.827);
+    }
+
+    .section_h1_sub {
+        font-size: x-large; 
+        margin-left: 0px;
+        color: rgba(0, 2, 3, 0.827);
+    }
+    .slogan {
+        font-size: large;
+        margin-left: 15px; 
+         color: rgba(0, 0, 0, 0.827);
+    }
+    .section_h2 {
+        margin-left: 0px;
+        color: rgba(0, 0, 0, 0.827);
+    }
+    .button_P_F {
+        margin-left: 0px;
+    }
+    .people_profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left:0px; 
+        margin-top: 20px;
+    }
+    .explore {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 15%;
+    }
+    .footer_section1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: black;
+        margin-top: 40px;
+        margin-bottom: 0px;
+    }
+    .copyrights {
+        margin-left: 15px;
+    }
+
 }

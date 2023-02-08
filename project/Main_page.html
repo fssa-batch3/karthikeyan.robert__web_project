@@ -18,7 +18,7 @@
  </div>
  <div class="profile_logo">
     
-     <div class="profile_name">
+     <div id="show_profile_name" class="profile_name">
          KARTHIKEYAN
      </div>
      <a href="./our profile/our_profile.html">
@@ -396,6 +396,15 @@
 
 
     </footer>
+
+    <script>
+        
+        const name = localStorage.getItem("name")
+        console.log(name);
+
+        document.getElementById("show_profile_name").innerText = name
+
+    </script>
     
 </body>
 

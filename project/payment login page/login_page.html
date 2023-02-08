@@ -25,9 +25,11 @@
     
     <section class="section_right_left">
         <div class="login_left login_or_register">
+            <form role="form" onsubmit="signIn(event);">
             <div class="title">
                 <h1 class="title_h1">LOG IN</h1>
             </div>
+            
             <div class="input">
                 
                 <input type="text" id="number or email id" required="true" placeholder="Email id" class="input_1">
@@ -48,9 +50,11 @@
 
             </div>
             <div class="login_button_a">
-                <button type="submit" >  <a href="../Main_page.html" class="login_button_a" >Login</a></button>
+                <button type="submit" >  Login</button>
+                <!-- <a href="../Main_page.html" class="login_button_a" ></a> -->
                 
             </div>
+        </form>
 
         </div>
 
