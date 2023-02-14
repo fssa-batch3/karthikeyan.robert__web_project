@@ -1,4 +1,5 @@
 const signUp = e => {
+    e.preventDefault();
     let name = document.getElementById("name").value 
     let email = document.getElementById("email").value 
     let number = document.getElementById("number").value
@@ -16,26 +17,35 @@ const signUp = e => {
         document.querySelector('form').reset();
         document.getElementById('email').focus();
         alert('Account created Successfully');
-        location.href = "../../Main_page.html";
+        location.href = "./login_page.html";
     }
     else{
         alert('Sorry the User already Exist!! \n Try with different Email');
         document.querySelector('form').reset();
     }
-    e.preventDefault();
+ 
 }
-const signIn = e =>{
-    let password = document.getElementById('password').value;
+
+function signIn(e){
+    e.preventDefault();
+    
+    email = document.getElementById('email').value,
+    number = document.getElementById('number').value,
+    password = document.getElementById('password').value;
+
     let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
+
     let exist = user_list.length &&
     JSON.parse(localStorage.getItem('user_list')).some(data =>
-        data.password.toLowerCase() == password);
+    data.email.toLowerCase() == email &&
+    data.number.toLowerCase() == number &&
+    data.password == password);
+
     if(!exist){
         alert("Incorrect login credentials");
     }
     else{
         alert("Your login in successful");
-        location.href = "/index.html";
+        location.href = "../Main_page.html";
     }
-    e.preventDefault();
 }

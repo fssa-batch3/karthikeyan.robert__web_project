@@ -29,22 +29,23 @@
       <div class="data">
         <div class="input">
             <label>Full Name</label>
-            <input type="text" id="name" required="true" placeholder="Full Name*" class="placeholder" >
+            <input pattern="[a-zA-Z0-9]+" type="text" id="name" required="true" placeholder="Full Name*" class="placeholder" >
        </div> 
           <div class="input">
               <label>Email Id</label>
-              <input type="text" id="email" required="true" placeholder="Email id* " class="placeholder" >
+              <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="text" id="email" required="true" placeholder="Email id* " class="placeholder" >
          </div>
             
             <div class="input">
                 <label>Phone Number</label>
-                <input type="text" id= "number" required="true" placeholder="Phone number* " class="placeholder" > 
+                <input pattern="[0-9].{9}" type="text" id= "number" required="true" placeholder="Phone number* " class="placeholder" > 
             </div>
          <div class="input">
             <label>Password</label>
             <input 
             id="password"
-            
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
             type="password" 
             placeholder="password*" 
             required="true" class="placeholder" />
@@ -53,13 +54,14 @@
             <label> Conform Password</label>
             <input 
                 id="conform_password"
-                
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
                 type="password" 
 				placeholder="Conform password*" 
 				required="true" class="placeholder"/>
          </div>
          <div class="create_account">
-            <button type="submit"   class="create_account">
+            <button type="submit"   class="create_account" >
                     REGISTER 
             </button>
 
@@ -161,8 +163,8 @@
             
             } -->
         
-            <script src="../assets/script.js" />
-
+           
+    <script src="../assets/script.js"></script>
 
 
            
@@ -173,3 +175,4 @@
 
 
 </html>
+

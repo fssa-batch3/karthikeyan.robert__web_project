@@ -25,37 +25,37 @@
     
     <section class="section_right_left">
         <div class="login_left login_or_register">
-            <form role="form" onsubmit="signIn(event);">
+        <form action="#" role="form" onsubmit="signIn(event)";>
             <div class="title">
                 <h1 class="title_h1">LOG IN</h1>
             </div>
-            
             <div class="input">
                 
-                <input type="text" id="number or email id" required="true" placeholder="Email id" class="input_1">
+                <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="text" id="email" required="true" placeholder="Email id" class="input_1">
                  
             </div>
             <div class="input">
                 
-                <input type="tel" id="number or email id" required="true" placeholder="Phone number" class="input_1">
+                <input  pattern="[0-9].{9}" type="tel" id="number" required="true" placeholder="Phone number" class="input_1">
              
             </div>
             <div class="input">
                 
                 <input 
+                    id = "password"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
                     type="password"
                     placeholder="Password"
                     required="true" 
-                    class="input_1"/>
+                    class="input_1">
 
             </div>
             <div class="login_button_a">
-                <button type="submit" >  Login</button>
-                <!-- <a href="../Main_page.html" class="login_button_a" ></a> -->
-                
+                <button type="submit" class="login_button_a"> LOGIN</button>    
             </div>
         </form>
-
+<!-- <a href="../Main_page.html" class="login_button_a" >Login</a> -->
         </div>
 
         <div class="createaccount login_or_register"> 
@@ -73,8 +73,8 @@
             </div>
             <div class="create_account">
                 <button>
-                    <a href="../payment login page/Register_page.html" class="create_account">CREAT ACCOUNT</a>
-                </button>
+                    <a href="../payment login page/Register_page.html" class="create_account">CREATE ACCOUNT</a>
+                </button>   
 
             </div>
         </div>
@@ -126,6 +126,8 @@
     </footer>
 </section>
     
+<script src="../assets/script.js"></script>
+
 
 
 
