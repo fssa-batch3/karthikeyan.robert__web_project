@@ -11,10 +11,12 @@
  WireFrame : https://drive.google.com/drive/u/0/folders/1VN4H3yCgy2mZFlu5_Jbyy_66yEh8OOMl
 
  List of features:
-    1.User CRUD:  * User sign up.
-                  * User login. *User profile.     
-                  * User edit in profile page. 
-                  * User Delete account.
+ 
+    1.User CRUD:  * user sign up.
+                  * user login. 
+                  * user profile.     
+                  * user edit in profile page. 
+                  * user delete account.
 
     2.Request CRUD:  * create request 
                      * Request showing 
