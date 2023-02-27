@@ -124,8 +124,8 @@
 
                                 </ul>
                             
-                            <a class="" href="../after_login_payment/AL_payment_1.html">    
-                                <button class="contribute_button">
+                            <a class="" href="">    
+                                <button class="contribute_button" type="submit">
                                 <img src="../../assets/images/get-money.png" alt="image" class="" height="30px" width="25px"/>
                                 <b class="contribute">CONTRIBUTE</b>
                                 </button>
@@ -189,6 +189,24 @@
 
 
     </footer>
+
+    <script>
+        let amount=document.querySelector(".input_box").value
+        let amount_total=0;
+        let total=amount_total
+        console.log(amount)
+        function amountTotal(){
+           amount_total+=amount+""
+           localStorage.setItem("amountTotal",amount_total)
+        }
+        
+        document.querySelector(".contribute_button").addEventListener("click",amountTotal)
+   
+
+        
+
+
+    </script>
 
 
 

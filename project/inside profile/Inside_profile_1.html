@@ -23,25 +23,25 @@
 </header>
 
 <body>
-    <sevtion class="profile_heading">
-        <h1 class="heading">
+    <section class="profile_heading">
+        <!-- <h1 class="heading">
             Help Sportsman Adithya Who Was Stabbed Multiple Times
-        </h1>
+        </h1> -->
 
-    </sevtion>
-    <sevtion class="profile_heading2">
-        <h2 class="heading">
+    </section>
+    <section class="profile_heading2">
+         <!-- <h2 class="heading">
             <ul class="backers_count">
                 <a class="about_backer" href="../inside profile/Inside_profile_1.html"><li>About</li></a>
                 <a class=" about_backer" href="../backers/backers_profile_1.html"><li>Backers (0)</li></a>
             </ul>
-        </h2>
+        </h2> -->
 
-    </sevtion>
+    </section>
 
     <section class="profile">
         
-        <div class="profile">
+        <!-- <div class="profile">
            
             <div class="profile_left">
                 <div class="profile_row_one">
@@ -133,7 +133,7 @@
 
             </div>
 
-        </div>
+        </div> -->
 
     </section>
     <footer class="footer">
@@ -178,7 +178,44 @@
 
 
     </footer>
+    <script>
 
+        const heading = [
+            {
+                "title": "Help Sportsman Adithya Who Was Stabbed Multiple Times",
+
+            }
+        ]
+
+        h1_heading = document.createElement("h1");
+        h1_heading.setAttribute("class","heading");
+        h1_heading.innerText = heading[0]["title"];
+        console.log(h1_heading);
+        document.querySelector("section.profile_heading").append(h1_heading);
+        
+        h2_heading = document.createElement("h2");
+        h2_heading.setAttribute("class","heading");
+        console.log(h1_heading);
+        document.querySelector("section.profile_heading").append(h2_heading);
+
+        ul_backers_count = document.createElement(ul);
+        ul_backers_count.setAttribute("class","backers_count");
+        h2_heading.append(ul_backers_count);
+
+        a_about_backers =  document.createElement(a);
+        
+
+
+        div_profile = document.createElement("div");
+        div_profile.setAttribute("class","profile");
+        console.log(div_profile);
+        document.querySelector("section.profile").append(div_profile);
+
+
+
+        let amount= document
+
+    </script>
 
 
 </body>

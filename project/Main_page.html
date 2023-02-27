@@ -18,14 +18,21 @@
  </div>
  <div class="profile_logo">
     
-     <div id="name" class="profile_name">
-         KARTHIKEYAN
+     <div id="user_name" class="profile_name">
+         <!-- KARTHIKEYAN -->
      </div>
-     <a href="./our profile/our_profile.html">
+     <!-- <a href="./our profile/our_profile.html"> -->
      <div class="logo_profile">
-         <img src="./assets/images/user.png" alt="image" class="user_logo"/>
+        <div class="dropdown">
+            <img src="./assets/images/user.png" alt="image" class="user_logo"/>
+            <div class="dropdown-content">
+            <a href="./our profile/our_profile.html">profile</a>
+            <a href="#">Log Out</a>
+           
+            </div>
+          </div>
      </div>
-    </a>
+    <!-- </a> -->
 
  </div>
 
@@ -55,10 +62,9 @@
                 <img src="./assets/images/story_1.jpg" alt="image" class="" />
 
             </div>
-            <div class="content">
-                <inline></inline>
-
-            </div>
+            <div class="progressa">
+                <div class="progressab" style="background-color: rgb(178, 222, 75);"></div>
+                </div>
             <div class="content_F_B">
                 <div class="funded_backers">
                     FUNDED</br>
@@ -398,12 +404,27 @@
     </footer>
 
     <script>
+                let progressval = 88;
+                let elm = document.getElementsByClassName('progressab')[0];
+                elm.style.width = progressval+"%";
+
+                elm.innerText = ""+progressval+"%";
+
+                if(progressval>95 && progressval<=100 ){   elm.style.backgroundColor = 'green';                                 
+                    }
+                else if(progressval>50 && progressval<90 ){ elm.style.backgroundColor = 'tomato';
+                 }
+               
+
         
-        let name = localStorage.getItem("name")
-        console.log(name);
+        let userId = JSON.parse(localStorage.getItem('userId'));
+        let user_list = JSON.parse(localStorage.getItem('user_list'));
 
-        document.getElementById("#name").innerText = name
-
+        function login_data(e){
+            return e.number == userId;
+        }
+        user_data = user_list.find(login_data);
+        document.querySelector(".user_name").innerText = user_data["name"];
     </script>
     
 </body>

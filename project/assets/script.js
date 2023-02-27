@@ -45,6 +45,7 @@ function signIn(e){
         alert("Incorrect login credentials");
     }
     else{
+        localStorage.setItem("userId", JSON.stringify(number))
         alert("Your login in successful");
         location.href = "../Main_page.html";
     }
