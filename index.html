@@ -404,13 +404,14 @@
 
     <script>
 
+
         const profiles=[
             {
                 "href":"./project/inside profile/Inside_profile_1.html",
                 "image": "./project/assets/images/story_1.jpg",
                 "pf_text_1":"FUNDED",
                 "pf_text_2":" $1234",
-                "persentage":"1%",
+                "persentage":"25%",
                 "pb_text_1":"BACKERS ",
                 "pb_text_2":"3",
                 "content_head":"Help Sportsman Adithya Who Was Stabbed Multiple Times",
@@ -440,8 +441,43 @@
                 "content_head":"Help 7 Years Old Ritanya to live her life",
                 "content":"Ritanya De Sarkar, a 7 year old little angel is suffering from ALL B Type Leukemia need Bone Marrow transplant on urgent basis.",
                 "days_left":"30 DAYS TO GO",
+        },
+        {
+                "href":"./project/inside profile/Inside_profile_4.html",
+                "image": "./project/assets/images/story_4.jpg",
+                "pf_text_1":"FUNDED",
+                "pf_text_2":" $1234",
+                "persentage":"1%",
+                "pb_text_1":"BACKERS ",
+                "pb_text_2":"3",
+                "content_head":"Help Sportsman Adithya Who Was Stabbed Multiple Times",
+                "content":" We adopt the deserted seniors and provide them shelter, food, medicare and personal care and attention. We provide food and medical assistance to the lonely seniors and rescue & rehabilitate the vulnerable people. Pls support us with generous donations",
+                "days_left":"10 DAYS TO GO",
+        },
+        {
+                "href":"./project/inside profile/Inside_profile_5.html",
+                "image": "./project/assets/images/story_5.jpg",
+                "pf_text_1":"FUNDED",
+                "pf_text_2":" $4321",
+                "persentage":"4%",
+                "pb_text_1":"BACKERS ",
+                "pb_text_2":"5",
+                "content_head":"Liver Transplantation",
+                "content":"Help Sri Gokula Krishna Gaushala provide these rescued cows & bulls with proper food shelter & medical care. The contributions will be used to get them fodder & medicines on a regular basis & to take in more rescued cows.",
+                "days_left":"20 DAYS TO GO",
+        },
+        {
+                "href":"./project/inside profile/Inside_profile_6.html",
+                "image": "./project/assets/images/story_6.jpg",
+                "pf_text_1":"FUNDED",
+                "pf_text_2":" $5321",
+                "persentage":"6%",
+                "pb_text_1":"BACKERS ",
+                "pb_text_2":"8",
+                "content_head":"Help Vidit feed 3000+ Stray dogs & cows everyday",
+                "content":"Help Vidit feed thousands of hungry stray animals everyday & also provide medical care to them. Donate generously to help him feed as many animals as possible.",
+                "days_left":"30 DAYS TO GO",
         }
-
     ]
 
 
@@ -453,7 +489,10 @@
         console.log(div_profiles_row_one);
         document.querySelector("section.people_profile").append(div_profiles_row_one);
 
-        for (i=0;i<3;i++){
+        for (i=0;i<profiles.length;i++){
+            
+                      
+                            
 
         div_profiles = document.createElement("div");
         div_profiles.setAttribute("class","profiles");
@@ -475,6 +514,15 @@
         img.setAttribute("alt","image");
         div_content_1.append(img);
 
+        div_progressa = document.createElement("div");
+        div_progressa.setAttribute("class","progressa");
+        div_profiles.append(div_progressa);
+
+        div_progressab = document.createElement("div");
+        div_progressab.setAttribute("class","progressab");
+        div_progressab.setAttribute("style","background-color: rgb(178, 222, 75);")
+        div_progressa.append(div_progressab);
+        
         div_content_F_B = document.createElement("div");
         div_content_F_B.setAttribute("class","content_F_B");
         div_profiles.append(div_content_F_B);
@@ -542,151 +590,74 @@
         b_boldd = document.createElement("b");
         b_boldd.innerText = profiles[i]["days_left"];
         p_days_left_p.append(b_boldd);
-
-        
+    
+                        
     }
 
-    const people_profile=[
-            {
-                "href":"./project/inside profile/Inside_profile_4.html",
-                "image": "./project/assets/images/story_4.jpg",
-                "pf_text_1":"FUNDED",
-                "pf_text_2":" $1234",
-                "persentage":"1%",
-                "pb_text_1":"BACKERS ",
-                "pb_text_2":"3",
-                "content_head":"Help Sportsman Adithya Who Was Stabbed Multiple Times",
-                "content":" We adopt the deserted seniors and provide them shelter, food, medicare and personal care and attention. We provide food and medical assistance to the lonely seniors and rescue & rehabilitate the vulnerable people. Pls support us with generous donations",
-                "days_left":"10 DAYS TO GO",
-        },
-        {
-                "href":"./project/inside profile/Inside_profile_5.html",
-                "image": "./project/assets/images/story_5.jpg",
-                "pf_text_1":"FUNDED",
-                "pf_text_2":" $4321",
-                "persentage":"4%",
-                "pb_text_1":"BACKERS ",
-                "pb_text_2":"5",
-                "content_head":"Liver Transplantation",
-                "content":"Help Sri Gokula Krishna Gaushala provide these rescued cows & bulls with proper food shelter & medical care. The contributions will be used to get them fodder & medicines on a regular basis & to take in more rescued cows.",
-                "days_left":"20 DAYS TO GO",
-        },
-        {
-                "href":"./project/inside profile/Inside_profile_6.html",
-                "image": "./project/assets/images/story_6.jpg",
-                "pf_text_1":"FUNDED",
-                "pf_text_2":" $5321",
-                "persentage":"6%",
-                "pb_text_1":"BACKERS ",
-                "pb_text_2":"8",
-                "content_head":"Help Vidit feed 3000+ Stray dogs & cows everyday",
-                "content":"Help Vidit feed thousands of hungry stray animals everyday & also provide medical care to them. Donate generously to help him feed as many animals as possible.",
-                "days_left":"30 DAYS TO GO",
+    let progressval = 87
+        let elm = document.querySelectorAll('.progressab')[0];
+
+                elm.style.width = progressval+"%";
+
+                elm.innerText = progressval+"%";
+
+                if(progressval>90 && progressval<=100 ){   elm.style.backgroundColor = 'green';                                 
+                    }
+                else if(progressval>1 && progressval<90 ){ elm.style.backgroundColor = 'tomato';
+                 }
+
+                 
+                 
+
+                 let userId = JSON.parse(localStorage.getItem('userId'));
+        let user_list = JSON.parse(localStorage.getItem('user_list'));
+
+        function login_data(e){
+            return e.number == userId;
+        }
+        user_data = user_list.find(login_data);
+        
+
+        function Check(){
+            if(localStorage.getItem("LoginValidate")=="true"){
+                
+                document.querySelector(".login_register").innerHTML=user_data["name"]
+                // document.querySelector(".login_register").innerText=user_data["name"];
+            }
         }
 
-    ]
+        window.addEventListener("load",Check)
+
+   
 
 
-    
-
-
-        div_profiles_row_two = document.createElement("div");
-        div_profiles_row_two.setAttribute("class","profiles_row_one");
-        console.log(div_profiles_row_two);
-        document.querySelector("section.people_profile").append(div_profiles_row_two);
-
-        for (i=0;i<3;i++){
-
-        div_profiles = document.createElement("div");
-        div_profiles.setAttribute("class","profiles");
-        div_profiles_row_two.append(div_profiles);
-        
-
-        a_profile_info  = document.createElement("a");
-        a_profile_info.setAttribute("class","profile_info");
-        a_profile_info.setAttribute("href",people_profile[i].href);
-        div_profiles.append(a_profile_info);
-        
-
-        div_content_1 = document.createElement("div");
-        div_content_1.setAttribute("class","content");
-        a_profile_info.append(div_content_1);
-
-        img = document.createElement("img");
-        img.setAttribute("src",people_profile[i]["image"]);
-        img.setAttribute("alt","image");
-        div_content_1.append(img);
-
-        div_content_F_B = document.createElement("div");
-        div_content_F_B.setAttribute("class","content_F_B");
-        div_profiles.append(div_content_F_B);
-
-        div_funded_backers_1 = document.createElement("div");
-        div_funded_backers_1.setAttribute("class","funded_backers");
-        div_content_F_B.append(div_funded_backers_1);
-
-        div_para_funded = document.createElement("p");
-        div_para_funded.innerText = people_profile[i]["pf_text_1"];
-        div_funded_backers_1.append(div_para_funded);
-
-        div_funded_amount = document.createElement("p");
-        div_funded_amount.innerText = people_profile[i]["pf_text_2"];
-        div_funded_backers_1.append(div_funded_amount);
-
-        div_persentage = document.createElement("div");
-        div_persentage.setAttribute("class","persentage");
-        div_content_F_B.append(div_persentage);
-
-
-        h1_persentage_space = document.createElement("h1");
-        h1_persentage_space.setAttribute("class","persentage_space");
-        h1_persentage_space.innerText = people_profile[i]["persentage"];
-        div_persentage.append(h1_persentage_space);
-
-        div_funded_backers_2 = document.createElement("div");
-        div_funded_backers_2.setAttribute("class","funded_backers");
-        div_content_F_B.append(div_funded_backers_2);
-
-        div_para_backers = document.createElement("p");
-        div_para_backers.innerText = people_profile[i]["pb_text_1"];
-        div_funded_backers_2.append(div_para_backers);
-
-        
-        div_para_backers_amt = document.createElement("p");
-        div_para_backers_amt.innerText = people_profile[i]["pb_text_2"];
-        div_funded_backers_2.append(div_para_backers_amt);
-
-
-        div_content_2 = document.createElement("div");
-        div_content_2.setAttribute("class","content");
-        div_profiles.append(div_content_2);
-         
-        p_para = document.createElement("p");
-        div_content_2.append(p_para);
-    
-        b_bold = document.createElement("b");
-        b_bold.innerText = people_profile [i]["content_head"];
-        p_para.append(b_bold);
-        
-        p = document.createElement("p");
-        p.innerText = people_profile [i]["content"];
-        div_content_2.append(p);
-
-        div_DAYS_left = document.createElement("div");
-        div_DAYS_left.setAttribute("class","DAYS_left");
-        div_profiles.append(div_DAYS_left);
-
-
-        p_days_left_p = document.createElement("p");
-        p_days_left_p.setAttribute("class","days_left_p");
-        div_DAYS_left.append(p_days_left_p);
-
-        b_boldd = document.createElement("b");
-        b_boldd.innerText = people_profile[i]["days_left"];
-        p_days_left_p.append(b_boldd);
-
-        
-    }
+// function createProduct(e) {]
+//             let product_image = document.getElementById("product_image").value,
+//                 product_name = document.getElementById("product_name").value,
+//                 product_type = document.getElementById("product_type").value,
+//                 product_quantity = document.getElementById("product_quantity").value,
+//                 product_price = document.getElementById("product_price").value;
+//             let product_list = JSON.parse(localStorage.getItem('product_list')) || [];
+//             let exist = product_list.length &&
+//                 JSON.parse(localStorage.getItem('product_list')).some(data =>
+//                     data.product_name.toLowerCase() == product_name.toLowerCase()
+//                 );
+//             if (!exist) {
+//                 let product_id = uuidv4()
+//                 product_list.push({
+//                     product_image, product_name, product_type, product_quantity,
+//                     product_price, product_id
+//                 });
+//                 localStorage.setItem('product_list', JSON.stringify(product_list));
+//                 document.querySelector('form').reset();
+//                 document.getElementById('product_name').focus();
+//                 alert('Product created Successfully');
+//             }
+//             else {
+//                 alert('Sorry the product already Exist!! \n Try with different dish or name');
+//                 document.querySelector('form').reset();
+//             }
+//         }
 
     
 

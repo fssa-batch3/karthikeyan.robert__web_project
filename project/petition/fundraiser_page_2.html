@@ -56,14 +56,14 @@
         <div class="Info">
             
             <div class="Basic_info">
-                Description<textarea class="basic input_option"> </textarea>
+                Description<textarea class="basic input_option" id="descripition"> </textarea>
             </div>
             <div class="featured_image">
                 <lable class="image_title">Featured Image</lable>
                 <div class="image_button">
                     
-                    <input placeholder="choose an image" class=" title input_option"/>
-                    <input type="file" name="featured_image" class="choose_image" id="customfile" accept="image/*" >
+                    
+                    <input  placeholder="choose an image" type="url" name="featured_image" class="choose_image  title input_option" id="customfile" accept="image/*" >
                 </div>    
 
             </div>
@@ -119,6 +119,17 @@
 
 
     </footer>
+    <script>
+
+        let form_2 = JSON.parse(localStorage.getItem('Request_list'))
+
+        function fillForm2(){
+           let desc = document.getElementById("descripition").value 
+           let featImg = document.getElementById("customfile").value
+
+
+        }
+    </script>
 
 
 

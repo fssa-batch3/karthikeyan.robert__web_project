@@ -45,14 +45,15 @@
 .input_option{
     width: 500px;
     height: 30px;
-    margin-left: 10px;
+    margin-left: -10px;
 }
 .petition_to{
     margin-left: 5%;
 }
 .basic{
     margin-left: -5px;
-    padding-left: -5px;
+    height: 100px;
+    resize: none;
 }
 .option{
     margin-left: 70px;

@@ -46,7 +46,8 @@ function signIn(e){
     }
     else{
         localStorage.setItem("userId", JSON.stringify(number))
+        localStorage.setItem("LoginValidate","True")
         alert("Your login in successful");
-        location.href = "../Main_page.html";
+        location.href = "../../index.html";
     }
 }

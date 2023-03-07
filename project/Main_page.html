@@ -64,7 +64,7 @@
             </div>
             <div class="progressa">
                 <div class="progressab" style="background-color: rgb(178, 222, 75);"></div>
-                </div>
+            </div>
             <div class="content_F_B">
                 <div class="funded_backers">
                     FUNDED</br>
@@ -424,7 +424,9 @@
             return e.number == userId;
         }
         user_data = user_list.find(login_data);
-        document.querySelector(".user_name").innerText = user_data["name"];
+        document.querySelector("#user_name").innerText = user_data["name"];
+        
+
     </script>
     
 </body>
