@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="../assets/css/edit_profile.css">
     <title>Edit Profile</title>
+    <link rel="icon" type="image/x-icon" href="./project/assets/images/logo.png">
 </head>
 <header class="profile_head">
 
@@ -15,14 +16,29 @@
     </div>
     <div class="profile_logo">
 
-        <div id="user_name" class="profile_name">
+        <!-- <div id="user_name" class="profile_name">
             KARTHIKEYAN
         </div>
         <a href="../our profile/our_profile.html">
             <div class="logo_profile">
                 <img src="../assets/images/user.png" alt="image" class="user_logo" />
             </div>
-        </a>
+        </a> -->
+        <div id="user_name" class="profile_name">
+            <!-- KARTHIKEYAN -->
+        </div>
+        <!-- <a href="./our profile/our_profile.html"> -->
+        <div class="logo_profile">
+           <div class="dropdown">
+               <img src="../assets/images/user.png" alt="image" class="user_logo"/>
+               <div class="dropdown-content">
+               <a href="../our profile/our_profile.html">profile</a>
+               <a href="#">Log Out</a>
+              
+               </div>
+             </div>
+        </div>
+       <!-- </a> -->
 
     </div>
 
@@ -147,6 +163,7 @@
             alert("Updated successfully");
             // window.location.href = "../Myprofile/6_profile.html"
             // console.log(user_list);
+            location.reload();
         }
 
         const dataDelete = document.querySelector(".btn-teritary");
@@ -169,6 +186,15 @@
                 // window.location.href = "../../index.html";
             };
         }
+
+        //user_name 
+        
+        function login_data(e){
+            return e.number == userId;
+        }
+        user_data = user_list.find(login_data);
+        document.querySelector("#user_name").innerText = user_data["name"];
+        
     </script>
 
 </body>

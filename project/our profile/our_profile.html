@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>KN funding</title>
+    <link rel="icon" type="image/x-icon" href="./project/assets/images/logo.png">
     <link rel="stylesheet" href="../assets/css/Main_page_style.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/our_profile_style.css" >
@@ -18,7 +19,7 @@
         </div>
         <div class="profile_logo">
             
-            <div class="profile_name">
+            <!-- <div class="profile_name">
                 KARTHIKEYAN
             </div>
             
@@ -26,12 +27,23 @@
                 <a href="./Profile_edit_page.html" class="profile_logo">
                     <img src="../assets/images/user.png" alt="image" class="user_logo"/>
                 </a>
-                <!-- <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                    </div> -->
+                
+            </div> -->
+            <div id="user_name" class="profile_name">
+                <!-- KARTHIKEYAN -->
             </div>
+            <!-- <a href="./our profile/our_profile.html"> -->
+            <div class="logo_profile">
+               <div class="dropdown">
+                   <img src="../assets/images/user.png" alt="image" class="user_logo"/>
+                   <div class="dropdown-content">
+                   <a href="../our profile/Profile_edit_page.html">profile</a>
+                   <a href="#">Log Out</a>
+                  
+                   </div>
+                 </div>
+            </div>
+           <!-- </a> -->
            
             
 
@@ -42,7 +54,7 @@
             <a href="./our_profile.html" class=" profile_head_2"><li> DASHBOARD</li></a>
             <a href="./my_campaigns.html" class=" profile_head_2"><li> MY CAMPAIGNS</li></a>
             <a href="./my_petition.html" class=" profile_head_2"><li> MY PETITIONS</li> </a>
-            <a  href="../../index.html" class="profile_head_2 log_out"><li><img  src="../assets/images/logout.png" alt="image" class="log_out"/></li></a>
+
     
         </ul>
     </div>  
@@ -52,7 +64,10 @@
 <body>
     <div class="dashboard">
         <div class="welcome_name">
-            <h2>Welcome,Karthikeyan!</h2>
+            <h2 class="welcome">Welcome,</h2>
+            <span id="welcome_user_name" class="welcome_user_name"></span>
+            
+        
         </div>
         <div class="welcome_tagline">
                 💗 You are now a part of KN funding Family...!
@@ -168,6 +183,22 @@
 
 
 </footer>
+
+<script>
+    let userId = JSON.parse(localStorage.getItem('userId'));
+        let user_list = JSON.parse(localStorage.getItem('user_list'));
+
+        function login_data(e){
+            return e.number == userId;
+        }
+        user_data = user_list.find(login_data);
+        document.querySelector("#user_name").innerText = user_data["name"];
+        document.querySelector("#welcome_user_name").innerText = user_data["name"];
+
+        
+        
+        
+</script>
 
 </body>
 

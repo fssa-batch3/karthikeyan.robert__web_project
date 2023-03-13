@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../assets/css/Main_page_style.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>KN funding</title>
+    <link rel="icon" type="image/x-icon" href="./project/assets/images/logo.png">
 </head>
 
 <header>
@@ -177,7 +178,6 @@
             let title = document.getElementById("title").value
             let requester_name = document.getElementById("campaigner_name").value
 
-            
             let form_1 = JSON.parse(localStorage.getItem('Request_list')) || [];
 
             let exist = form_1.length &&
@@ -185,7 +185,6 @@
                     data.title.toLowerCase() == title.toLowerCase()
                 );
             if (!exist) {
-
                 form_1.push({ 
                     "shortdecp":short_decp, 
                     "category":category,
@@ -196,10 +195,7 @@
                     "Goal":"",
                     "End date":"",
                     "Campaign End Method":"",
-
-
                 });
-
                 localStorage.setItem('Request_list', JSON.stringify(form_1));
 
                 console.log(localStorage.getItem('Request_list'));

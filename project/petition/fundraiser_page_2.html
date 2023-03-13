@@ -53,6 +53,7 @@
               </div>
             
         </div>
+        <form role="form" onsubmit="fillForm2(event)">
         <div class="Info">
             
             <div class="Basic_info">
@@ -71,10 +72,12 @@
         <div   class="back_save ">
             <a href="../petition/fundraiser_page_1.html" ><button class="back">BACK</button></a>
             
-            <a href="../petition/fundraiser_page_3.html"><button  class="save save_continue"> Save & Continue</button></a>
+            <!-- <a href="../petition/fundraiser_page_3.html"> -->
+                <button  type="submit" class="save save_continue"> Save & Continue</button>
+            <!-- </a> -->
              
         </div>
-        
+    </form>
 
     </div>
     <footer class="footer">
@@ -121,12 +124,33 @@
     </footer>
     <script>
 
-        let form_2 = JSON.parse(localStorage.getItem('Request_list'))
+        // let form_2 = JSON.parse(localStorage.getItem('Request_list'))
 
-        function fillForm2(){
+        function fillForm2(e){
+           
+            e.preventDefault();
+            
            let desc = document.getElementById("descripition").value 
            let featImg = document.getElementById("customfile").value
 
+           let form_1 = JSON.parse(localStorage.getItem('Request_list'))
+
+        //    let lastItem = form_1[form_1.length - 1]
+
+           console.log(form_1)
+
+        //    console.log(lastItem)
+
+           form_1[form_1.length - 1].Description = desc
+           form_1[form_1.length - 1]["Featured Image"] = featImg
+
+
+        //    console.log(desc,featImg)
+
+        console.log(form_1)
+
+        localStorage.setItem("Request_list",JSON.stringify(form_1))
+           window.location.href = "../petition/fundraiser_page_3.html"
 
         }
     </script>
