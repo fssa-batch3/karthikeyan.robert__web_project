@@ -18,6 +18,14 @@
                   * user edit in profile page. 
                   * user delete account.
 
-    2.Request CRUD:  * create request 
+   2.Request CRUD:   * create request 
                      * Request showing 
                      * delete request.
+
+   3.PROGRESS BAR :	* Create Progressing bar
+                     * Read Progress Bar
+                     * Update Progress bar
+      
+   4.Dontae CRUD :	*Donate cash
+                     * read 
+                     * show                 

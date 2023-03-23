@@ -26,6 +26,14 @@ const signUp = e => {
  
 }
 
+
+function myFunctions(){
+    document.getElementById("loginName").innerHTML = userlist3["name"]
+
+}
+
+document.querySelector(".login_button_a").addEventListener("click",myFunctions)
+
 function signIn(e){
     e.preventDefault();
     

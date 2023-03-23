@@ -24,7 +24,7 @@
                 class="search_logo" /></button>
     </div>
     <ul class="Login_Register">
-        <li class="Login"><a href="./project/payment login page/login_page.html" class="login_register">Login</a></li>
+        <li class="Login"><a href="./project/payment login page/login_page.html" class="login_register" id="user_name">Login</a></li>
 
     </ul>
 
@@ -35,12 +35,12 @@
         <div class="section">
             <h1 class="section_h1">HELP EACH OTHER BY DONATING MONEY </h1>
             <h1 class="section_h1_sub">We know you need funds, we are here to help you</h1>
-            <h2 class="section_h2"><b class="slogan">Start a fundraiser or petition within 5 minutes!</b></h2>
+            <h2 class="section_h2"><b class="slogan">Start a fundraiser within 5 minutes!</b></h2>
             <div class="button_P_F">
-                <a href="./project/payment login page/Register_page.html"><button class="Button_petition button_PF">
-                        START A PETITION</button></a>
-                <a href="./project/payment login page/Register_page.html"><button class="Button_fundraiser button_PF">
-                        START A CAMPAIGN</button></a>
+                <a href="./project/payment login page/Register_page.html"><button class="Button_fundraiser">
+                        START A FUNDRAISER</button></a>
+                <!-- <a href="./project/payment login page/Register_page.html"><button class="Button_ button_PF">
+                        START A CAMPAIGN</button></a> -->
             </div>
         </div>
     </section>
@@ -483,12 +483,121 @@
 
 
     
-
+        let show_cart = JSON.parse(localStorage.getItem("Request_list"))
+        console.log(show_cart)
 
         div_profiles_row_one = document.createElement("div");
         div_profiles_row_one.setAttribute("class","profiles_row_one");
         console.log(div_profiles_row_one);
         document.querySelector("section.people_profile").append(div_profiles_row_one);
+
+        
+        for (i=0;i<show_cart.length;i++){
+
+            div_profiles = document.createElement("div");
+            div_profiles.setAttribute("class","profiles");
+            div_profiles_row_one.append(div_profiles);
+            
+    
+            a_profile_info  = document.createElement("a");
+            a_profile_info.setAttribute("class","profile_info");
+            a_profile_info.setAttribute("href",show_cart[i].href);
+            div_profiles.append(a_profile_info);
+            
+    
+            div_content_1 = document.createElement("div");
+            div_content_1.setAttribute("class","content");
+            a_profile_info.append(div_content_1);
+    
+            img = document.createElement("img");
+            img.setAttribute("src", show_cart[i]["Featured Image"]);
+            img.setAttribute("alt","image");
+            img.setAttribute("width","300px");
+            img.setAttribute("height","200px");
+            div_content_1.append(img);
+    
+            div_progressa = document.createElement("div");
+            div_progressa.setAttribute("class","progressa");
+            div_profiles.append(div_progressa);
+    
+            div_progressab = document.createElement("div");
+            div_progressab.setAttribute("class","progressab");
+            div_progressab.setAttribute("style","background-color: rgb(178, 222, 75);")
+            div_progressa.append(div_progressab);
+            
+            div_content_F_B = document.createElement("div");
+            div_content_F_B.setAttribute("class","content_F_B");
+            div_profiles.append(div_content_F_B);
+    
+            div_funded_backers_1 = document.createElement("div");
+            div_funded_backers_1.setAttribute("class","funded_backers");
+            div_content_F_B.append(div_funded_backers_1);
+    
+            div_para_funded = document.createElement("p");
+            div_para_funded.innerText = "FUNDED";
+            div_funded_backers_1.append(div_para_funded);
+    
+            div_funded_amount = document.createElement("p");
+            div_funded_amount.innerText = "0";
+            div_funded_backers_1.append(div_funded_amount);
+    
+            div_persentage = document.createElement("div");
+            div_persentage.setAttribute("class","persentage");
+            div_content_F_B.append(div_persentage);
+    
+    
+            h1_persentage_space = document.createElement("h1");
+            h1_persentage_space.setAttribute("class","persentage_space");
+            h1_persentage_space.innerText = "0%";
+            div_persentage.append(h1_persentage_space);
+    
+            div_funded_backers_2 = document.createElement("div");
+            div_funded_backers_2.setAttribute("class","funded_backers");
+            div_content_F_B.append(div_funded_backers_2);
+    
+            div_para_backers = document.createElement("p");
+            div_para_backers.innerText = "BACKERS";
+            div_funded_backers_2.append(div_para_backers);
+    
+            
+            div_para_backers_amt = document.createElement("p");
+            div_para_backers_amt.innerText = "0";
+            div_funded_backers_2.append(div_para_backers_amt);
+    
+    
+            div_content_2 = document.createElement("div");
+            div_content_2.setAttribute("class","content");
+            div_profiles.append(div_content_2);
+             
+            p_para = document.createElement("p");
+            div_content_2.append(p_para);
+        
+            b_bold = document.createElement("b");
+            b_bold.innerText = show_cart [i]["title"];
+            p_para.append(b_bold);
+            
+            p = document.createElement("p");
+            p.innerText = show_cart [i]["shortdecp"];
+            div_content_2.append(p);
+    
+            div_DAYS_left = document.createElement("div");
+            div_DAYS_left.setAttribute("class","DAYS_left");
+            div_profiles.append(div_DAYS_left);
+    
+    
+            p_days_left_p = document.createElement("p");
+            p_days_left_p.setAttribute("class","days_left_p");
+            div_DAYS_left.append(p_days_left_p);
+    
+            b_boldd = document.createElement("b");
+            b_boldd.innerText = show_cart[i]["End date"];
+            p_days_left_p.append(b_boldd);
+        
+                            
+        }
+
+
+        
 
         for (i=0;i<profiles.length;i++){
             
@@ -595,7 +704,7 @@
                         
     }
 
-    let progressval = 87
+    let progressval = 34
         let elm = document.querySelectorAll('.progressab')[0];
 
                 elm.style.width = progressval+"%";
