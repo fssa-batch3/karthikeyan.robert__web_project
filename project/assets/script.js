@@ -17,7 +17,7 @@ const signUp = e => {
         document.querySelector('form').reset();
         document.getElementById('email').focus();
         alert('Account created Successfully');
-        location.href = "./login_page.html";
+        location.href = "../Main_page.html";
     }
     else{
         alert('Sorry the User already Exist!! \n Try with different Email');
@@ -56,6 +56,6 @@ function signIn(e){
         localStorage.setItem("userId", JSON.stringify(number))
         localStorage.setItem("LoginValidate","True")
         alert("Your login in successful");
-        location.href = "../../index.html";
+        location.href = "../Main_page.html";
     }
 }
