@@ -14,16 +14,33 @@
      <button class="search_button"><img src="../assets/images/search_logo.png" alt="image" class="search_logo" /></button>
  </div>
  <div class="profile_logo">
-     <div class="profile_name">
+     <!-- <div class="profile_name">
          KARTHIKEYAN
      </div>
      <a href="../our profile/our_profile.html">
         <div class="logo_profile">
             <img src="../assets/images/user.png" alt="image" class="user_logo"/>
         </div>
-       </a>
+       </a> -->
+       <div id="user_name" class="profile_name">
+        <!-- KARTHIKEYAN -->
+    </div>
+    <!-- <a href="./our profile/our_profile.html"> -->
+    <div class="logo_profile">
+       <div class="dropdown">
+           <img src="../assets/images/user.png" alt="image" class="user_logo"/>
+           <div class="dropdown-content">
+           <a href="../our profile/our_profile.html">profile</a>
+           <a href="../index.html">Log Out</a>
+          
+           </div>
+         </div>
+    </div>
+   <!-- </a> -->
 
  </div>
+
+ 
 
 
 </header>
@@ -165,8 +182,12 @@
 
            console.log(form_1[form_1.length - 1])
 
-        localStorage.setItem("Request_list",JSON.stringify(form_1))
-           window.location.href = "../Main_page.html"
+           
+           localStorage.setItem("Request_list",JSON.stringify(form_1))
+           alert('Your request has been created')
+            window.location.href = "../our profile/my_campaigns.html"
+            
+
         }
 
 

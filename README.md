@@ -35,9 +35,10 @@
 
 
 
+   User flow.
            
      Register page
-     
+
       Step 1:
       Click the "login" button which is at the top right of the page.
       The page navigate to the login page.
@@ -97,6 +98,18 @@
          The user logged out from the profile page and redirected to the home page. 
 
 
+         Start a fundraiser 
+
+            Step 5 :
+
+         click the "start a fundraiser" button which is in the main page
+         and fill the detailes asked there.then click "Save and continue" 
+         button.
+         The page will redirected to the next form 2.fill the details asked then 
+         again click "Save and continue". it will redirected to the form 3.
+         fill the details and click the "SUBMITT" button.
+         your Request as been created.
+         the page will redirected to the profile page.
 
 
 
