@@ -428,7 +428,7 @@
                 "pb_text_2":"3",
                 "content_head":"Help Sportsman Adithya Who Was Stabbed Multiple Times",
                 "content":"Adhitya was attacked by unidentified man, thereby stopping his advancement in sports.He is admitted for the prosthetic nose treatment and with your support will undergo nose reconstruction later.Please help and share the link.",
-                "days_left":"10 DAYS TO GO",
+                "days_left":"DONATE",
         },
         {
                 "href":"./project/inside profile/Inside_profile_2.html",
@@ -440,7 +440,7 @@
                 "pb_text_2":"5",
                 "content_head":"Liver Transplantation",
                 "content":"90% of my liver got damaged. Urgent need of treatment.",
-                "days_left":"20 DAYS TO GO",
+                "days_left":"DONATE",
         },
         {
                 "href":"./project/inside profile/Inside_profile_3.html",
@@ -452,7 +452,7 @@
                 "pb_text_2":"8",
                 "content_head":"Help 7 Years Old Ritanya to live her life",
                 "content":"Ritanya De Sarkar, a 7 year old little angel is suffering from ALL B Type Leukemia need Bone Marrow transplant on urgent basis.",
-                "days_left":"30 DAYS TO GO",
+                "days_left":"DONATE",
         },
         {
                 "href":"./project/inside profile/Inside_profile_4.html",
@@ -464,7 +464,7 @@
                 "pb_text_2":"3",
                 "content_head":"Help Sportsman Adithya Who Was Stabbed Multiple Times",
                 "content":" We adopt the deserted seniors and provide them shelter, food, medicare and personal care and attention. We provide food and medical assistance to the lonely seniors and rescue & rehabilitate the vulnerable people. Pls support us with generous donations",
-                "days_left":"10 DAYS TO GO",
+                "days_left":"DONATE",
         },
         {
                 "href":"./project/inside profile/Inside_profile_5.html",
@@ -476,7 +476,7 @@
                 "pb_text_2":"5",
                 "content_head":"Liver Transplantation",
                 "content":"Help Sri Gokula Krishna Gaushala provide these rescued cows & bulls with proper food shelter & medical care. The contributions will be used to get them fodder & medicines on a regular basis & to take in more rescued cows.",
-                "days_left":"20 DAYS TO GO",
+                "days_left":"DONATE",
         },
         {
                 "href":"./project/inside profile/Inside_profile_6.html",
@@ -488,7 +488,7 @@
                 "pb_text_2":"8",
                 "content_head":"Help Vidit feed 3000+ Stray dogs & cows everyday",
                 "content":"Help Vidit feed thousands of hungry stray animals everyday & also provide medical care to them. Donate generously to help him feed as many animals as possible.",
-                "days_left":"30 DAYS TO GO",
+                "days_left":"DONATE",
         }
     ]
 
@@ -596,13 +596,23 @@
             div_profiles.append(div_DAYS_left);
     
     
-            p_days_left_p = document.createElement("p");
-            p_days_left_p.setAttribute("class","days_left_p");
-            div_DAYS_left.append(p_days_left_p);
+            // p_days_left_p = document.createElement("p");
+            // p_days_left_p.setAttribute("class","days_left_p");
+            // div_DAYS_left.append(p_days_left_p);
     
-            b_boldd = document.createElement("b");
-            b_boldd.innerText = show_cart[i]["End date"];
-            p_days_left_p.append(b_boldd);
+            // b_boldd = document.createElement("b");
+            // b_boldd.innerText = show_cart[i]["End date"];
+            // p_days_left_p.append(b_boldd);
+            a_donate_btn = document.createElement("a");
+            a_donate_btn.setAttribute ("href","./project/payment login page/card_details.html");
+            div_DAYS_left.append(a_donate_btn);
+
+
+            donate_btn = document.createElement("button");
+            donate_btn.innerText = "DONATE";
+            donate_btn.setAttribute("class","donate_btn")
+            a_donate_btn.append(donate_btn);
+
         
                             
         }
@@ -704,18 +714,32 @@
         div_profiles.append(div_DAYS_left);
 
 
-        p_days_left_p = document.createElement("p");
-        p_days_left_p.setAttribute("class","days_left_p");
-        div_DAYS_left.append(p_days_left_p);
+        // p_days_left_p = document.createElement("p");
+        // p_days_left_p.setAttribute("class","days_left_p");
+        // div_DAYS_left.append(p_days_left_p);
 
-        b_boldd = document.createElement("b");
-        b_boldd.innerText = profiles[i]["days_left"];
-        p_days_left_p.append(b_boldd);
+        // b_boldd = document.createElement("b");
+        // b_boldd.innerText = profiles[i]["days_left"];
+        // p_days_left_p.append(b_boldd);
+
+        a_donate_btn = document.createElement("a");
+        a_donate_btn.setAttribute ("href","./project/payment login page/card_details.html");
+        div_DAYS_left.append(a_donate_btn);
+
+        donate_btn = document.createElement("button");
+        donate_btn.innerText = "DONATE";
+        donate_btn.setAttribute("class","donate_btn")
+        a_donate_btn.append(donate_btn);
+
     
                         
     }
 
-    let progressval = 34
+
+
+    //progress bar 
+
+    let progressval = 88
         let elm = document.querySelectorAll('.progressab')[0];
 
                 elm.style.width = progressval+"%";
@@ -730,7 +754,7 @@
                  
                  
 
-                 let userId = JSON.parse(localStorage.getItem('userId'));
+        let userId = JSON.parse(localStorage.getItem('userId'));
         let user_list = JSON.parse(localStorage.getItem('user_list'));
 
         function login_data(e){

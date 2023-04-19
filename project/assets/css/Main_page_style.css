@@ -123,14 +123,19 @@ header{
     margin:10px;
     border-bottom: 1px solid gray;
 }
-.DAYS_left{
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-    margin:4px;
-}
-.days_left_p{
-    margin-left: 80px;
-}
+.donate_btn {
+
+    background-color: TOMATO; 
+    color: black; 
+    border: 2px solid TOMATO;
+    width:100%;
+    height: 50px;
+    margin-top: auto;
+    margin-bottom:-10px ;
+    font-weight: 900 ;
+    font-size: larger;
+
+  }
 .profile_info{
     text-decoration: none;
     color: black;
