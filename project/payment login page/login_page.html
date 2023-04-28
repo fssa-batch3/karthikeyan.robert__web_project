@@ -1,141 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="../assets/css/login_style.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
-    <title>KN funding</title>
-    <link rel="icon" type="image/x-icon" href="./project/assets/images/logo.png">
-</head>
+    <head>
+        <link rel="stylesheet" href="../assets/css/login_style.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+        <title>KN funding</title>
+        <link rel="icon" type="image/x-icon" href="./project/assets/images/logo.png">
+    </head>
 
-<header>
-    <a href="../KNfunding.html"> <img src="../assets/images/logo.png" alt="image" class="logo" /> </a>
-    <div class="search_input_logo">
-        <input class="search_box" placeholder="Search Campaigns & Petitions"></input>
-        <button class="search_button"><img src="../assets/images/search_logo.png" alt="image" class="search_logo" /></button>
-    </div>
-    <ul class="Login_Register">
-        <li class="Login"><a href="../payment login page/login_page.html"  class="login_register">Login</a></li>
+    <header>
+        <a href="../KNfunding.html">
+            <img src="../assets/images/logo.png" alt="image" class="logo"> 
+        </a>
+        <div class="search_input_logo">
+            <input class="search_box" placeholder="Search Campaigns & Petitions"></input>
+            <button class="search_button">
+                <img src="../assets/images/search_logo.png" alt="image" class="search_logo">
+            </button>
+        </div>
+        <ul class="Login_Register">
+            <li class="Login">
+                <a href="../payment login page/login_page.html" class="login_register">Login</a>
+            </li>
         
-    </ul>
+        </ul>
 
-</header>
-<body>
+    </header>
+    <body>
     
-    <section class="section_right_left">
-        <div class="login_left login_or_register">
-        <form action="#" role="form" onsubmit="signIn(event)";>
-            <div class="title">
-                <h1 class="title_h1">LOG IN</h1>
-            </div>
-            <div class="input">
+        <section class="section_right_left">
+            <div class="login_left login_or_register">
+                <form action="#" role="form" onsubmit="signIn(event)";>
+                    <div class="title">
+                        <h1 class="title_h1">LOG IN</h1>
+                    </div>
+                    <div class="input">
                 
-                <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="text" id="email" required="true" placeholder="Email id" class="input_1">
+                        <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="text" id="email" required="true" placeholder="Email id" class="input_1">
                  
-            </div>
-            <div class="input">
+                    </div>
+                    <div class="input">
                 
-                <input  pattern="[0-9].{9}" type="tel" id="number" required="true" placeholder="Phone number" class="input_1">
+                        <input pattern="[0-9].{9}" type="tel" id="number" required="true" placeholder="Phone number" class="input_1">
              
-            </div>
-            <div class="input">
+                    </div>
+                    <div class="input">
                 
-                <input 
-                    id = "password"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                    title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-                    type="password"
-                    placeholder="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-                    required="true" 
-                    class="input_1">
+                        <input 
+                            id = "password"
+                    
+                            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                            type="password"
+                            placeholder="password*"
+                            required="true" 
+                            class="input_1">
 
+                    </div>
+                    <div class="login_button_a">
+                        <button type="submit" class="login_button_a"> LOGIN</button>    
+                    </div>
+                </form>
+                <!-- <a href="../Main_page.html" class="login_button_a" >Login</a> -->
             </div>
-            <div class="login_button_a">
-                <button type="submit" class="login_button_a" > LOGIN</button>    
+
+            <div class="createaccount login_or_register"> 
+                <div class="title">
+                    <h1>REGISTER</h1>
+
+                </div>
+                <div class="content">
+                    <p>IF YOU STILL DON'T HAVE A KN FUNDING.COM ACCOUNT, USE THIS OPTION 
+                        TO ACCESS THE REGISTRATION FORM.
+                    </p>
+                    <P>
+                        BY GIVING US YOUR DETAILS, FUNDRAISING IN KN FUNDING.COM WILL BE FASTER AND AN GOOD EXPERIENCE
+                    </P>
+                </div>
+                <div class="create_account">
+                    <button>
+                        <a href="../payment login page/Register_page.html" class="create_account">CREATE ACCOUNT</a>
+                    </button>   
+
+                </div>
             </div>
-        </form>
-<!-- <a href="../Main_page.html" class="login_button_a" >Login</a> -->
-        </div>
 
-
-
-        <div class="createaccount login_or_register"> 
-            <div class="title">
-                <h1>REGISTER</h1>
-
-            </div>
-            <div class="content">
-                <p>IF YOU STILL DON'T HAVE A KN FUNDING.COM ACCOUNT, USE THIS OPTION 
-                    TO ACCESS THE REGISTRATION FORM.
-                </p>
-                <P>
-                    BY GIVING US YOUR DETAILS, FUNDRAISING IN KN FUNDING.COM WILL BE FASTER AND AN GOOD EXPERIENCE
-                </P>
-            </div>
-            <div class="create_account">
-                <button>
-                    <a href="../payment login page/Register_page.html" class="create_account">CREATE ACCOUNT</a>
-                </button>   
-
-            </div>
-        </div>
-
-    </section>
-
-    <section>
-    <footer class="footer">
-        <section class="footer_section1">
-        <img src="../assets/images/footer_logo.png" alt="image" class="footer_logo" />
-            
-            <div class="contact">
-  	
-       
-            <a href="https://www.instagram.com/karthi_kn_offl/" class="instagram_fb"> 
-            <img src="../assets/images/instagram.png" alt="image"
-            height="40px" width="50px"/> 
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100057753970924" class="instagram_fb"> 
-            <img src="../assets/images/facebook.png"  alt="image"
-            height="40px" width="50px" />
-            </a>
-            <a href="https://www.linkedin.com/in/karthi-keyan-b01438254/" class="instagram_fb"> 
-             <img src="../assets/images/linkedin.png"  alt="image"
-              height="42px" width="50px" />
-            </a>
-            
-            
-            </div>
-            
-            <div class="footer_contact">
-                <ul class="footer_contact_list">
-                    <li><h2>CONTACT INFO</h2></li>
-                    <li>Global Infocity, St, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu, 600041.</li>
-                    <li>+91 7010847986</li>
-                    <li>karthikeyan.robert@fssa.freshworks.com</li>    
-
-                </ul>
-
-            </div>
-        </section>    
-        <section class="footer_section2">
-            <div class="copyrights">
-                <b> KN FUNDING is a Registered Trademark. © 2022 KN FUNDING. All Rights Reserved. Made by karthikeyan with 💗 </b>
-             </div>
         </section>
 
+        <section>
+            <footer class="footer">
+                <section class="footer_section1">
+                    <img src="../assets/images/footer_logo.png" alt="image" class="footer_logo">
+            
+                    <div class="contact">
+       
+                        <a href="https://www.instagram.com/karthi_kn_offl/" class="instagram_fb"> 
+                            <img src="../assets/images/instagram.png" alt="image"
+                                height="40px" width="50px"> 
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100057753970924" class="instagram_fb"> 
+                            <img src="../assets/images/facebook.png" alt="image"
+                                height="40px" width="50px">
+                        </a>
+                        <a href="https://www.linkedin.com/in/karthi-keyan-b01438254/" class="instagram_fb"> 
+                            <img src="../assets/images/linkedin.png" alt="image"
+                                height="42px" width="50px">
+                        </a>
+            
+                    </div>
+            
+                    <div class="footer_contact">
+                        <ul class="footer_contact_list">
+                            <li>
+                                <h2>CONTACT INFO</h2>
+                            </li>
+                            <li>Global Infocity, St, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu, 600041.</li>
+                            <li>+91 7010847986</li>
+                            <li>karthikeyan.robert@fssa.freshworks.com</li>    
 
-    </footer>
-</section>
+                        </ul>
+
+                    </div>
+                </section>    
+                <section class="footer_section2">
+                    <div class="copyrights">
+                        <b> KN FUNDING is a Registered Trademark. © 2022 KN FUNDING. All Rights Reserved. Made by karthikeyan with 💗 </b>
+                    </div>
+                </section>
+
+            </footer>
+        </section>
     
-<script src="../assets/script.js"></script>
+        <script src="../assets/script.js"></script>
 
-
-
-
-</body>
-
-
+    </body>
 
 </html>

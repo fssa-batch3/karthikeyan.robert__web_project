@@ -1,6 +1,5 @@
 // const root = window.location.origin;
 // const beforeLogin = `<header>
-        
 
 //         <a href="${root}/index.html"> <img src="${root}/project/assets/images/logo.png" alt="image" class="logo" /> </a>
 //             <div class="search_input_logo">
@@ -12,10 +11,10 @@
 //                 <a href="${root}/project/payment login page/login_page.html" class="login_register" >
 //                 <button class="Login" id="login" type="submit">Login
 //                 </button>
-//                 </a> 
+//                 </a>
 
 //             </div>
-    
+
 //         </header>`
 
 // const afterLogin = `<header>
@@ -26,27 +25,25 @@
 //                             <button class="search_button"><img src="${root}/assets/images/search_logo.png" alt="image" class="search_logo" /></button>
 //                         </div>
 //                         <div class="profile_logo">
-                        
+
 //                             <div id="user_name" class="profile_name">
-                               
+
 //                             </div>
-                            
+
 //                             <div class="logo_profile">
 //                             <div class="dropdown">
 //                                 <img src="${root}/assets/images/user.png" alt="image" class="user_logo"/>
 //                                 <div class="dropdown-content">
 //                                 <a href="${root}/our profile/our_profile.html">profile</a>
 //                                 <a href="${root}/index.html" id="logout">Log Out</a>
-                                
+
 //                                 </div>
 //                                 </div>
 //                             </div>
-                        
 
 //                         </div>
 
 //                     </header>`
-
 
 // let phone_id = JSON.parse(localStorage.getItem("userId"));
 // if (phone_id) {

@@ -1,152 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="../assets/css/Register_page_style.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
-   <title>KN funding</title> 
-   <link rel="icon" type="image/x-icon" href="./project/assets/images/logo.png">
-</head>
+    <head>
+        <link rel="stylesheet" href="../assets/css/Register_page_style.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+        <title>KN funding</title> 
+        <link rel="icon" type="image/x-icon" href="./project/assets/images/logo.png">
+    </head>
 
-<header>
-    <a href="../KNfunding.html"> <img src="../assets/images/logo.png" alt="image" class="logo" /> </a>
-    <div class="search_input_logo">
-        <input class="search_box" placeholder="Search Campaigns & Petitions"></input>
-        <button class="search_button"><img src="../assets/images/search_logo.png" alt="image" class="search_logo" /></button>
-    </div>
-    <ul class="Login_Register">
-        <li class="Login"><a href="../payment login page/login_page.html" class="login_register">Login</a></li>
-     </ul>
-
-</header>
-<body>
-    
-    <div id="login"  class="center">
-        <div class="container">
-         <div class="title">Register </div>
-      <form action="#" role="form" onsubmit="signUp(event);">
-      <div class="data">
-        <div class="input">
-            <label>Full Name</label>
-            <input pattern="[a-zA-Z0-9]+" type="text" id="name" required="true" placeholder="Full Name*" class="placeholder" >
-       </div> 
-          <div class="input">
-              <label>Email Id</label>
-              <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="text" id="email" required="true" placeholder="Email id* " class="placeholder" >
-         </div>
-            
-            <div class="input">
-                <label>Phone Number</label>
-                <input pattern="[0-9].{9}" type="text" id= "number" required="true" placeholder="Phone number* " class="placeholder" > 
-            </div>
-         <div class="input">
-            <label>Password</label>
-            <input 
-            id="password"
-            pattern="(?=.*\d)(?=.*[a-z]).{8,}"
-            title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-            type="password" 
-            placeholder="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" 
-            required="true" class="placeholder" />
-         </div>
-         <div class="input">
-            <label> Conform Password</label>
-            <input 
-                id="conform_password"
-                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-                type="password" 
-				placeholder="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" 
-				required="true" class="placeholder"/>
-         </div>
-         <div class="create_account">
-            <button type="submit"   class="create_account" >
-                    REGISTER 
+    <header>
+        <a href="../KNfunding.html">
+            <img src="../assets/images/logo.png" alt="image" class="logo"> 
+        </a>
+        <div class="search_input_logo">
+            <input class="search_box" placeholder="Search Campaigns & Petitions"></input>
+            <button class="search_button">
+                <img src="../assets/images/search_logo.png" alt="image" class="search_logo">
             </button>
-
         </div>
-           
-           
-        </div>  
-      </form>
-       </div>
-       </div>
-       <footer class="footer">
-        <section class="footer_section1">
-        <img src="../assets/images/footer_logo.png" alt="image" class="footer_logo" />
+        <ul class="Login_Register">
+            <li class="Login">
+                <a href="../payment login page/login_page.html" class="login_register">Login</a>
+            </li>
+        </ul>
+
+    </header>
+    <body>
+    
+        <div id="login" class="center">
+            <div class="container">
+                <div class="title">Register </div>
+                <form action="#" role="form" onsubmit="signUp(event);">
+                    <div class="data">
+                        <div class="input">
+                            <label>Full Name</label>
+                            <input pattern="[a-zA-Z0-9]+" type="text" id="name" required="true" placeholder="Full Name*" class="placeholder">
+                        </div> 
+                        <div class="input">
+                            <label>Email Id</label>
+                            <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" type="text" id="email" required="true" placeholder="Email id* " class="placeholder">
+                        </div>
             
-            <div class="contact">
-  	
+                        <div class="input">
+                            <label>Phone Number</label>
+                            <input pattern="[0-9].{9}" type="text" id= "number" required="true" placeholder="Phone number* " class="placeholder"> 
+                        </div>
+                        <div class="input">
+                            <label>Password</label>
+                            <input 
+                                id="password"
+                                pattern="(?=.*\d)(?=.*[a-z]).{8,}"
+                                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                type="password" 
+                                placeholder="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" 
+                                required="true" class="placeholder">
+                        </div>
+                        <div class="input">
+                            <label> Conform Password</label>
+                            <input 
+                                id="conform_password"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                type="password" 
+                                placeholder="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" 
+                                required="true" class="placeholder">
+                        </div>
+                        <div class="create_account">
+                            <button type="submit" class="create_account">
+                                REGISTER 
+                            </button>
+
+                        </div>
+           
+                    </div>  
+                </form>
+            </div>
+        </div>
+        <footer class="footer">
+            <section class="footer_section1">
+                <img src="../assets/images/footer_logo.png" alt="image" class="footer_logo">
+            
+                <div class="contact">
        
-            <a href="https://www.instagram.com/karthi_kn_offl/" class="instagram_fb"> 
-            <img src="../assets/images/instagram.png" alt="image"
-            height="40px" width="50px"/> 
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100057753970924" class="instagram_fb"> 
-            <img src="../assets/images/facebook.png"  alt="image"
-            height="40px" width="50px" />
-            </a>
-            <a href="https://www.linkedin.com/in/karthi-keyan-b01438254/" class="instagram_fb"> 
-             <img src="../assets/images/linkedin.png"  alt="image"
-              height="42px" width="50px" />
-            </a>
+                    <a href="https://www.instagram.com/karthi_kn_offl/" class="instagram_fb"> 
+                        <img src="../assets/images/instagram.png" alt="image"
+                            height="40px" width="50px"> 
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100057753970924" class="instagram_fb"> 
+                        <img src="../assets/images/facebook.png" alt="image"
+                            height="40px" width="50px">
+                    </a>
+                    <a href="https://www.linkedin.com/in/karthi-keyan-b01438254/" class="instagram_fb"> 
+                        <img src="../assets/images/linkedin.png" alt="image"
+                            height="42px" width="50px">
+                    </a>
             
+                </div>
             
-            </div>
-            
-            <div class="footer_contact">
-                <ul class="footer_contact_list">
-                    <li><h2>CONTACT INFO</h2></li>
-                    <li>Global Infocity, St, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu, 600041.</li>
-                    <li>+91 7010847986</li>
-                    <li>karthikeyan.robert@fssa.freshworks.com</li>    
+                <div class="footer_contact">
+                    <ul class="footer_contact_list">
+                        <li>
+                            <h2>CONTACT INFO</h2>
+                        </li>
+                        <li>Global Infocity, St, Kodandarama Nagar, Perungudi, Chennai, Tamil Nadu, 600041.</li>
+                        <li>+91 7010847986</li>
+                        <li>karthikeyan.robert@fssa.freshworks.com</li>    
 
-                </ul>
+                    </ul>
 
-            </div>
-        </section>    
-        <section class="footer_section2">
-            <div class="copyrights">
-                <b> KN FUNDING is a Registered Trademark. © 2022 KN FUNDING. All Rights Reserved. Made by karthikeyan with 💗 </b>
-             </div>
-        </section>
+                </div>
+            </section>    
+            <section class="footer_section2">
+                <div class="copyrights">
+                    <b> KN FUNDING is a Registered Trademark. © 2022 KN FUNDING. All Rights Reserved. Made by karthikeyan with 💗 </b>
+                </div>
+            </section>
 
-
-    </footer>
-    <!-- <script> -->
+        </footer>
+        <!-- <script> -->
 
         <!-- // function getData(){
-        //     event.preventDefault();
+            //     event.preventDefault();
 
+            // const name = document.getElementById("name").value 
+            // const email = document.getElementById("email").value 
+            // const number = document.getElementById("number").value
+            // const password = document.getElementById("password").value 
+            // const conform_password =document.getElementById("conform_password").value 
 
-        // const name = document.getElementById("name").value 
-        // const email = document.getElementById("email").value 
-        // const number = document.getElementById("number").value
-        // const password = document.getElementById("password").value 
-        // const conform_password =document.getElementById("conform_password").value 
+            // console.log(name)       
+            // console.log(email)
+            // console.log(number)
+            // console.log(password)
+            // console.log(conform_password)
 
+            // localStorage.setItem("name" , name)
+            // localStorage.setItem("email" , email)
+            // localStorage.setItem("number" , number)
+            // localStorage.setItem("password" , password)
+            // localStorage.setItem("conform_password" , conform_password )
 
-        // console.log(name)       
-        // console.log(email)
-        // console.log(number)
-        // console.log(password)
-        // console.log(conform_password)
+            // window.location.href ="../Main_page.html"
 
-        // localStorage.setItem("name" , name)
-        // localStorage.setItem("email" , email)
-        // localStorage.setItem("number" , number)
-        // localStorage.setItem("password" , password)
-        // localStorage.setItem("conform_password" , conform_password )
-            
-
-        // window.location.href ="../Main_page.html"
-
-        // }     -->
+            // }     -->
         <!-- <script type="text/javascript">
             const signup = e => {
-             let formData = JSON.parse(localStorage.getItem('formData')) || [];
+            let formData = JSON.parse(localStorage.getItem('formData')) || [];
 
             formData.push({
             name: document.getElementById('name').value,
@@ -163,17 +164,9 @@
             e.preventDefault();
             
             } -->
-        
            
-    <script src="../assets/script.js"></script>
+        <script src="../assets/script.js"></script>
 
-
-           
-    
-
-</body>
-
-
+    </body>
 
 </html>
-
