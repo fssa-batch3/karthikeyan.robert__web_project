@@ -222,16 +222,29 @@
           div_DAYS_left.setAttribute("class", "DAYS_left");
           div_profiles.append(div_DAYS_left);
 
-  p_days_left_p = document.createElement("p");
-          p_days_left_p.setAttribute("class", "days_left_p");
-          div_DAYS_left.append(p_days_left_p);
+        //   p_days_left_p = document.createElement("p");
+        //   p_days_left_p.setAttribute("class", "days_left_p");
+        //   div_DAYS_left.append(p_days_left_p);
 
-          b_boldd = document.createElement("b");
-          b_boldd.innerText = show_cart[i]["End date"];
-          p_days_left_p.append(b_boldd);
+        //   b_boldd = document.createElement("b");
+        //   b_boldd.innerText = show_cart[i]["End date"];
+        //   p_days_left_p.append(b_boldd);
+
+        a_donate_btn = document.createElement("a");
+            a_donate_btn.setAttribute(
+                    "href",
+                    "../payment login page/card_details.html"
+                );
+            div_DAYS_left.append(a_donate_btn);
+
+            donate_btn = document.createElement("button");
+            donate_btn.innerText = "DONATE";
+            donate_btn.setAttribute("class", "donate_btn");
+            a_donate_btn.append(donate_btn);
+
+
         }
     </script>
-
     </body>
 
 </html>

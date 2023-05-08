@@ -409,8 +409,8 @@
             </section>
 
         </footer>
-        <a href=""></a>
-        <script>
+   
+        <script >
 const profiles = [
   {
     href: "../project/After_login_pages/after_login_inside_profile/AL_inside_profile_1.html",
@@ -492,6 +492,7 @@ const profiles = [
 ];
 
 const show_cart = JSON.parse(localStorage.getItem("Request_list"));
+
 console.log(show_cart);
 
 div_profiles_row_one = document.createElement("div");
@@ -711,28 +712,43 @@ for (i = 0; i < profiles.length; i++) {
   a_donate_btn.append(donate_btn);
 }
 
-const progressval = 50;
-const elm = document.getElementsByClassName("progressab")[0];
-elm.style.width = `${progressval}%`;
 
-elm.innerText = `${progressval}%`;
 
-if (progressval > 95 && progressval <= 100) {
-  elm.style.backgroundColor = "green";
-} else if (progressval > 50 && progressval < 90) {
-  elm.style.backgroundColor = "tomato";
-}
 
-const userId = JSON.parse(localStorage.getItem("userId"));
-const user_list = JSON.parse(localStorage.getItem("user_list"));
 
-function login_data(e) {
-  return e.number == userId;
-}
-user_data = user_list.find(login_data);
-document.querySelector("#user_name").innerText = user_data.name;
+
+
+
+
+
+
+
+
+            //progressBAR
+            const progressval = 50;
+            const elm = document.getElementsByClassName("progressab")[0];
+            elm.style.width = `${progressval}%`;
+
+            elm.innerText = `${progressval}%`;
+
+            if (progressval > 95 && progressval <= 100) {
+              elm.style.backgroundColor = "green";
+            } else if (progressval > 50 && progressval < 90) {
+              elm.style.backgroundColor = "tomato";
+            }
+
+            const userId = JSON.parse(localStorage.getItem("userId"));
+            const user_list = JSON.parse(localStorage.getItem("user_list"));
+
+            function login_data(e) {
+              return e.number == userId;
+            }
+            user_data = user_list.find(login_data);
+            document.querySelector("#user_name").innerText = user_data.name;
+
     </script>
     
     </body>
+
 
 </html>

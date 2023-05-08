@@ -204,19 +204,19 @@
 
                                 </footer>
 
-                                <script>
-        const amount = document.querySelector(".input_box").value;
-        let amount_total = 0;
-        const total = amount_total;
-        console.log(amount);
-        function amountTotal() {
-          amount_total += `${amount}`;
-          localStorage.setItem("amountTotal", amount_total);
-        }
-        
-        document
-  .querySelector(".contribute_button")
-  .addEventListener("click", amountTotal);
+    <script>
+                    const amount = document.querySelector(".input_box").value;
+                    let amount_total = 0;
+                    const total = amount_total;
+                    console.log(amount);
+                    function amountTotal() {
+                    amount_total += `${amount}`;
+                    localStorage.setItem("amountTotal", amount_total);
+                    }
+                    
+                    document
+                    .querySelector(".contribute_button")
+                    .addEventListener("click", amountTotal);
     </script>
 
 </body>

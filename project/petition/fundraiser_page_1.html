@@ -182,35 +182,35 @@
         </footer>
 
         <script>
-        // function publish(){
-        // let post_title = document.getElementById("title").value;
-        // let post_subtitle = document.getElementById("sub_title").value;
-        // let post_tags = document.getElementById("post_tags").value;
-        // let post_text = document.getElementById("text-input").innerText;
+        function publish(){
+        let post_title = document.getElementById("title").value;
+        let post_subtitle = document.getElementById("sub_title").value;
+        let post_tags = document.getElementById("post_tags").value;
+        let post_text = document.getElementById("text-input").innerText;
 
-        // let people_profile
-        //     if ( JSON.parse(localStorage.getItem("people_profile"))) {
-        //         people_profile = JSON.parse(localStorage.getItem("people_profile"))
-        //     }
-        //     else {
-        //         people_profile =new Array()
-        //     }
-        // people_profile.push({
-        //     "href": string,
-        //     "image": string,
-        //     "pf_text_1": string,
-        //     "pf_text_2": string,
-        //     "persentage": string,
-        //     "pb_text_1": string,
-        //     "pb_text_2": string,
-        //     "content_head": string,
-        //     "content": string,
-        //     "days_left": string
-        //     })
-        //         localStorage.setItem("people_profile", JSON.stringify(people_profile));
-        //         alert("Successfully Posted :white_check_mark:");
-        //         window.location.href = "../home/3_home.html";
-        // };
+        let people_profile
+            if ( JSON.parse(localStorage.getItem("people_profile"))) {
+                people_profile = JSON.parse(localStorage.getItem("people_profile"))
+            }
+            else {
+                people_profile =new Array()
+            }
+        people_profile.push({
+            "href": string,
+            "image": string,
+            "pf_text_1": string,
+            "pf_text_2": string,
+            "persentage": string,
+            "pb_text_1": string,
+            "pb_text_2": string,
+            "content_head": string,
+            "content": string,
+            "days_left": string
+            })
+                localStorage.setItem("people_profile", JSON.stringify(people_profile));
+                alert("Successfully Posted :white_check_mark:");
+                window.location.href = "../home/3_home.html";
+        };
 
         function form_1(e) {
           e.preventDefault();
