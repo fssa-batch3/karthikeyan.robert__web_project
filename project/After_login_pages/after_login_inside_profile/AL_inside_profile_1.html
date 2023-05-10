@@ -23,14 +23,24 @@
         </div>
         <div class="profile_logo">
         
-            <div class="profile_name">
-                KARTHIKEYAN
+            <div class="profile_name" id="user_name">
+                <!-- KARTHIKEYAN -->
             </div>
-            <a href="../../our profile/our_profile.html">
+            <div class="logo_profile">
+                <div class="dropdown">
+                    <img src="../../assets/images/user.png" alt="image" class="user_logo">
+                    <div class="dropdown-content">
+                        <a href="../../our profile/Profile_edit_page.html">Edit profile</a>
+                        <a href="../../../index.html">Log Out</a>
+              
+                    </div>
+                </div>
+            </div>
+            <!-- <a href="../../our profile/our_profile.html">
                 <div class="logo_profile">
                     <img src="../../assets/images/user.png" alt="image" class="user_logo">
                 </div>
-            </a>
+            </a> -->
     
         </div>
     
@@ -38,8 +48,8 @@
 
     <body>
         <sevtion class="profile_heading">
-            <h1 class="heading">
-                Help Sportsman Adithya Who Was Stabbed Multiple Times
+            <h1 class="heading" id= "title_card">
+                <!-- Help Sportsman Adithya Who Was Stabbed Multiple Times -->
             </h1>
 
         </sevtion>
@@ -68,17 +78,12 @@
                         </p>
                     </div>
                     <div class="profile_row_two">
-                        <img src="../../assets/images/story_1.jpg" alt="image" class="" width="800px" height="500px">
+                        <!-- <img src="../../assets/images/story_1.jpg" alt="image" class="" width="800px" height="500px"> -->
                     </div>
                     <div class="profile_row_three">
-                        <p>
-                            <b> Adithya’s life would’ve completely different had it not been for that fateful day.</b>
-                        </p>
-                        <p>
-                            Adithya M, 21 yrs old, is a leading Archer in the city of Chennai, and has won lot many accolades.  
-                            Along with sports, he is also pursuing Engineering and is a top scorer.
-                            But given that his heart remains in making it big in Archery, he took it up as his career.
-
+                       
+                        <p id = "detail_desc"> 
+                            
                         </p>
 
                     </div>
@@ -95,27 +100,39 @@
                     </div>
                     <div class="right_row_two">
                         <div class="row_two">
-                            <b >Medical Causes</b>
-                            <p class="co_campaigner">
-                                <img src="../../assets/images/group.png" alt="image" class="M_C_A" width="20px" height="20px">
-                                <b>Co-Campaigner:Uma Sundar| M/O Adithya Sundar </b>
-                            </p>
-                            <p class="co_campaigner">
-                                <img src="../../assets/images/user-avatar.png" alt="image" class="M_C_A" width="20px" height="20px">
-                                <b> :Adithya </b>
-                            </p>
+                            <b id="category_type">
+                                #
+                                 <!-- Medical Causes -->
+                                </b>
+                            
                         </div>
                         <div class="row_three"> 
                             <p>
-                                <b>
-                                    <img src="../../assets/images/rupee.png" alt="image" class="" width="14px" height="14px"> 0
-                                    raised of <img src="../../assets/images/rupee.png" alt="image" class="" width="13px" height="13px">
-                                    3000000 Goal
-                            </p>
-                                </b>
 
-                        </div>
-                                <inline class="inline_p"> </inline>
+                                <img src="../../assets/images/rupee.png" alt="image" class="" width="14px" height="14px" /> 
+                                <b>
+                                0
+                                </b>
+                                 <b>
+                                 raised of 
+                                </b>
+                            <img src="../../assets/images/rupee.png" alt="image" class="" width="14px" height="14px" />
+                            <b id="goal"> 
+                             <!-- 3000000 -->
+                            </b>
+                            <b>
+                                Goal
+                            </b>
+                        </p>
+            
+                            </div>
+                        
+                            <div>
+                                <div class="progressa">
+                                    <div class="progressab" style="    background-color: rgb(178, 222, 75);">
+                                    </div>
+                                    </div>
+                            </div>
                                 <div class="after_inline">
                                     <p>10 days left</p> 
                                     <p> 0 Backers</p>    
@@ -149,9 +166,9 @@
 
                                     </div>
                                     <div class="row_five_para"> 
-                                        <p>
-                                            Adhitya was attacked by unidentified man, thereby stopping his advancement in sports. 
-                                            He is admitted for the prosthetic nose treatment and with your support will undergo nose reconstruction later.
+                                        <p id="short_description">
+                                            <!-- Adhitya was attacked by unidentified man, thereby stopping his advancement in sports. 
+                                            He is admitted for the prosthetic nose treatment and with your support will undergo nose reconstruction later. -->
                                         </p>
                                     </div>
 
@@ -205,6 +222,32 @@
                                 </footer>
 
     <script>
+
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const puid = urlParams.get("puid");
+
+        let details = JSON.parse(localStorage.getItem("Request_list"));
+        let unique_detail = details.filter(e => e.uuid == puid);
+
+        image = document.createElement("img");
+        image.setAttribute("width","800px");
+        image.setAttribute("height","500px");
+        image.setAttribute("src",unique_detail[0]["Featured Image"]);
+        document.querySelector(".profile_row_two").append(image);
+        
+        document.querySelector("p#detail_desc").innerText = unique_detail[0]["Description"];
+        document.querySelector("b#goal").innerText = unique_detail[0]["Goal"];
+
+
+        document.querySelector("h1#title_card").innerText = unique_detail[0]["title"];
+        document.getElementById("short_description").innerText = unique_detail[0]["shortdecp"];
+
+        document.getElementById("category_type").innerText = unique_detail[0]["category"]
+
+
+
+
                     const amount = document.querySelector(".input_box").value;
                     let amount_total = 0;
                     const total = amount_total;
