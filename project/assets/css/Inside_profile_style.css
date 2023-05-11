@@ -150,38 +150,84 @@ header{
     flex-direction: column;
     justify-content: center;
     margin-left: 15%;
+
+    
+}
+
+
+
+.amount_box_1:hover {
+    background-color: tomato;
 }
 .amount_box_1{
     width:80px;
     height:20px;
+    background-color: #d9d4d4d2;
     border-left: 2px solid black;
     border-right:2px solid black ;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2px;
+    text-align: center;
+    transition: background-color 0.2s;
 
+}
+.amount_box_2:hover {
+    background-color: tomato;
 }
 .amount_box_2{
     width:80px;
     height:20px;
+    background-color: #d9d4d4d2;
     border-left: 2px solid black;
     border-right:2px solid black ;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2px;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+.amount_box_3:hover {
+    background-color: tomato;
 }
 .amount_box_3{
     width:80px;
     height:20px;
+    background-color: #d9d4d4d2;
     border-left: 2px solid black;
     border-right:2px solid black ;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    text-align: center;
+    transition: background-color 0.2s;
 }
 .contribute_button{
-   
-    width:250px;
-    background-color:orange;
+    font-size: larger;
+    text-align: center;
+    width:260px;
+    background-color:tomato;
     color:white;
+    padding: 8px;
+    transition: background-color 0.2s;
+
 }
+.contribute_button:hover{
+    background-color: whitesmoke;
+}
+.contribute{
+    transition: color 0.2s;
+}
+.contribute:hover{
+    color: tomato;
+}
+
 .row_five_para{
     margin:5px;
     color: darkgray;
