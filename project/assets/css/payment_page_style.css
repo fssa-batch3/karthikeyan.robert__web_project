@@ -28,8 +28,8 @@
     height: 34px;
     font-size: larger;
     border: 2px solid black;
-    color:white;
-    background-color: orange;
+    color:black;
+    background-color:  #d9d4d4d2;
 }
 .right_row_3{
     display: flex;
