@@ -30,41 +30,36 @@
 
     <body>
         <section class="profile_heading">
-            <!-- <h1 class="heading">
-                Help Sportsman Adithya Who Was Stabbed Multiple Times
-                </h1> -->
+            <h1 class="heading" id="title_card">
+                <!-- Help Sportsman Adithya Who Was Stabbed Multiple Times -->
+                </h1>
 
         </section>
         <section class="profile_heading2">
-            <!-- <h2 class="heading">
+            <h2 class="heading">
                 <ul class="backers_count">
                 <a class="about_backer" href="../inside profile/Inside_profile_1.html"><li>About</li></a>
                 <a class=" about_backer" href="../backers/backers_profile_1.html"><li>Backers (0)</li></a>
                 </ul>
-                </h2> -->
+                </h2>
 
         </section>
 
         <section class="profile">
         
-            <!-- <div class="profile">
+            <div class="profile">
            
                 <div class="profile_left">
                 <div class="profile_row_one">
                 <p><b> This campaign has been verified by KN Funding & medical team at the Hospital!</b></p>
                 </div>
                 <div class="profile_row_two">
-                <img src="../assets/images/story_1.jpg" alt="image" class=""  width="800px" height="500px"/>
+                <!-- <img src="../assets/images/story_1.jpg" alt="image" class=""  width="800px" height="500px"/> -->
                 </div>
                 <div class="profile_row_three">
-                <p>
-                <b> Adithya’s life would’ve completely different had it not been for that fateful day.</b>
-                </p>
-                <p>
-                Adithya M, 21 yrs old, is a leading Archer in the city of Chennai, and has won lot many accolades.  
-                Along with sports, he is also pursuing Engineering and is a top scorer.
-                But given that his heart remains in making it big in Archery, he took it up as his career.
-
+                
+                <p id = "detail_desc">
+                    
                 </p>
 
                 </div>
@@ -80,21 +75,44 @@
 
                 </div>
                 <div class="right_row_two">
-                <div class="row_two">
-                <b >Medical Causes</b>
-                <p class="co_campaigner"> <img src="../assets/images/group.png" alt="image" class="M_C_A"  width="20px" height="20px"/> <b>Co-Campaigner:Uma Sundar| M/O Adithya Sundar </b></p>
-                <p class="co_campaigner"> <img src="../assets/images/user-avatar.png" alt="image" class="M_C_A" width="20px" height="20px"/><b> :Adithya </b></p>
+                <div class="row_two" >
+                    
+                <b id="category_type">
+                    
+                     <!-- Medical Causes -->
+                    </b>
+
                 </div>
                 <div class="row_three"> 
                 <p>
-                <b> <img src="../assets/images/rupee.png" alt="image" class="" width="14px" height="14px" /> 0
-                raised of <img src="../assets/images/rupee.png" alt="image" class="" width="10px" height="10px" />
-                3000000 Goal
-                </p>
+
+                    <img src="../assets/images/rupee.png" alt="image" class="" width="14px" height="14px" /> 
+                    <b>
+                    0
+                    </b>
+                     <b>
+                     raised of 
+                    </b>
+                <img src="../assets/images/rupee.png" alt="image" class="" width="14px" height="14px" />
+                <b id="goal"> 
+                 <!-- 3000000 -->
                 </b>
+                <b>
+                    Goal
+                </b>
+            </p>
 
                 </div>
-                <inline class="inline_p"> </inline>
+            
+                <div>
+                    <div class="progressa">
+                        <div class="progressab" style="    background-color: rgb(178, 222, 75);">
+                        </div>
+                        </div>
+                </div>
+                <!-- <inline class="inline_p"> </inline> -->
+
+
                 <div class="after_inline">
                 <p>10 days left</p> 
                 <p> 0 Backers</p>    
@@ -120,17 +138,17 @@
                             
                 <a class="" href="../payment login page/login_page.html">    
                 <button class="contribute_button">
-                <img src="../assets/images/get-money.png" alt="image" class="" height="30px" width="25px"/>
-                <b class="contribute">CONTRIBUTE</b>
+                <!-- <img src="../assets/images/get-money.png" alt="image" class="" height="30px" width="25px"/> -->
+                <b class="contribute">DONATE</b>
                 </button>
                 </a>    
                 </div>     
 
                 </div>
                 <div class="row_five_para"> 
-                <p>
-                Adhitya was attacked by unidentified man, thereby stopping his advancement in sports. 
-                He is admitted for the prosthetic nose treatment and with your support will undergo nose reconstruction later.
+                <p id="short_description">
+                <!-- Adhitya was attacked by unidentified man, thereby stopping his advancement in sports. 
+                He is admitted for the prosthetic nose treatment and with your support will undergo nose reconstruction later. -->
                 </p>
                 </div>
 
@@ -138,7 +156,7 @@
 
                 </div>
 
-                </div> -->
+                </div>
 
         </section>
         <footer class="footer">
@@ -182,35 +200,73 @@
             </section>
 
         </footer>
-        <script>const heading = [
-          {
-            title: "Help Sportsman Adithya Who Was Stabbed Multiple Times",
-  },
-];
+        <script>
+        
+        
+        
+//         const heading = [
+//           {
+//             title: "Help Sportsman Adithya Who Was Stabbed Multiple Times",
+//             about: "../inside profile/Inside_profile_1.html",
+//   },
+// ];
 
-h1_heading = document.createElement("h1");
-h1_heading.setAttribute("class", "heading");
-h1_heading.innerText = heading[0].title;
-console.log(h1_heading);
-document.querySelector("section.profile_heading").append(h1_heading);
+// h1_heading = document.createElement("h1");
+// h1_heading.setAttribute("class", "heading");
+// h1_heading.innerText = heading[0].title;
+// console.log(h1_heading);
+// document.querySelector("section.profile_heading").append(h1_heading);
 
-h2_heading = document.createElement("h2");
-h2_heading.setAttribute("class", "heading");
-console.log(h1_heading);
-document.querySelector("section.profile_heading").append(h2_heading);
+// h2_heading = document.createElement("h2");
+// h2_heading.setAttribute("class", "heading");
+// console.log(h1_heading);
+// document.querySelector("section.profile_heading").append(h2_heading);
 
-ul_backers_count = document.createElement(ul);
-ul_backers_count.setAttribute("class", "backers_count");
-h2_heading.append(ul_backers_count);
+// ul_backers_count = document.createElement("ul");
+// ul_backers_count.setAttribute("class", "backers_count");
+// h2_heading.append(ul_backers_count);
 
-a_about_backers = document.createElement(a);
+// a_about_backers = document.createElement("a");
+// a_about_backers.setAttribute("class","about_backer");
+// a_about_backers.setAttribute("href",heading[0].about);
+// ul_backers_count.append(a_about_backers);
 
-div_profile = document.createElement("div");
-div_profile.setAttribute("class", "profile");
-console.log(div_profile);
-document.querySelector("section.profile").append(div_profile);
+// li_inneText
 
-const amount = document;
+
+
+
+
+// div_profile = document.createElement("div");
+// div_profile.setAttribute("class", "profile");
+// console.log(div_profile);
+// document.querySelector("section.profile").append(div_profile);
+
+// const amount = document;
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const puid = urlParams.get("puid");
+
+        let details = JSON.parse(localStorage.getItem("Request_list"));
+        let unique_detail = details.filter(e => e.uuid == puid);
+
+        image = document.createElement("img");
+        image.setAttribute("width","800px");
+        image.setAttribute("height","500px");
+        image.setAttribute("src",unique_detail[0]["Featured Image"]);
+        document.querySelector(".profile_row_two").append(image);
+        
+        document.querySelector("p#detail_desc").innerText = unique_detail[0]["Description"];
+        document.querySelector("b#goal").innerText = unique_detail[0]["Goal"]
+
+        document.querySelector("h1#title_card").innerText = unique_detail[0]["title"];
+        document.getElementById("short_description").innerText = unique_detail[0]["shortdecp"];
+
+        document.getElementById("category_type").innerText = unique_detail[0]["category"]
+
+
+
+
     </script>
 
     </body>

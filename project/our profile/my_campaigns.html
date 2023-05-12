@@ -128,7 +128,9 @@
 
         </footer>
 
-        <script>const show_cart = JSON.parse(localStorage.getItem("Request_list"));
+        <script>
+        
+        const show_cart = JSON.parse(localStorage.getItem("Request_list"));
         console.log(show_cart);
 
         div_profiles_row_one = document.createElement("div");
@@ -137,16 +139,16 @@
         document.querySelector("section.people_profile").append(div_profiles_row_one);
 
         for (i = 0; i < show_cart.length; i++) {
-  div_profiles = document.createElement("div");
+            div_profiles = document.createElement("div");
           div_profiles.setAttribute("class", "profiles");
           div_profiles_row_one.append(div_profiles);
 
-  a_profile_info = document.createElement("a");
+            a_profile_info = document.createElement("a");
           a_profile_info.setAttribute("class", "profile_info");
           a_profile_info.setAttribute("href", show_cart[i].href);
           div_profiles.append(a_profile_info);
 
-  div_content_1 = document.createElement("div");
+        div_content_1 = document.createElement("div");
           div_content_1.setAttribute("class", "content");
           a_profile_info.append(div_content_1);
 
