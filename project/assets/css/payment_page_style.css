@@ -98,3 +98,11 @@
     margin-left: 20px;
     border:1px solid gray;
 }
+.amount_symbol{
+    margin-left: 80px;
+    margin-right: 5px;
+}
+.Total_amount_symbol{
+    margin-left: 220px;
+   
+}

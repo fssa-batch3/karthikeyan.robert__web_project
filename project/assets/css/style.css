@@ -107,6 +107,10 @@ header{
     cursor: pointer;
 }
 
+.d-none{
+    display: none;
+}
+
 .Button_fundraiser:hover{
     color: black;
     background-color: tomato;

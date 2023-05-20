@@ -116,9 +116,9 @@
                             placeholder="*keep your title within 200 characters" 
                             class="title input_option" 
                             id="title" 
-                            pattern="[A-Za-z\s]{3,200}"
+                            pattern="{3,200}"
                         >
-
+                        <!-- [A-Za-z\s] -->
                     </div>
                     <div class="Basic_info">
                         Campaigner Name 
@@ -182,49 +182,47 @@
         </footer>
 
         <script>
-        function publish(){
-        let post_title = document.getElementById("title").value;
-        let post_subtitle = document.getElementById("sub_title").value;
-        let post_tags = document.getElementById("post_tags").value;
-        let post_text = document.getElementById("text-input").innerText;
+        // function publish(){
+        // let post_title = document.getElementById("title").value;
+        // let post_subtitle = document.getElementById("sub_title").value;
+        // let post_tags = document.getElementById("post_tags").value;
+        // let post_text = document.getElementById("text-input").innerText;
 
-        let people_profile
-            if ( JSON.parse(localStorage.getItem("people_profile"))) {
-                people_profile = JSON.parse(localStorage.getItem("people_profile"))
-            }
-            else {
-                people_profile =new Array()
-            }
-        people_profile.push({
-            "href": string,
-            "image": string,
-            "pf_text_1": string,
-            "pf_text_2": string,
-            "persentage": string,
-            "pb_text_1": string,
-            "pb_text_2": string,
-            "content_head": string,
-            "content": string,
-            "days_left": string,
-            "uuid":string
-            })
-                localStorage.setItem("people_profile", JSON.stringify(people_profile));
-                alert("Successfully Posted :white_check_mark:");
-                window.location.href = "../home/3_home.html";
-        };
+        // let people_profile
+        //     if ( JSON.parse(localStorage.getItem("people_profile"))) {
+        //         people_profile = JSON.parse(localStorage.getItem("people_profile"))
+        //     }
+        //     else {
+        //         people_profile =new Array()
+        //     }
+        // people_profile.push({
+        //     "href": string,
+        //     "image": string,
+        //     "pf_text_1": string,
+        //     "pf_text_2": string,
+        //     "persentage": string,
+        //     "pb_text_1": string,
+        //     "pb_text_2": string,
+        //     "content_head": string,
+        //     "content": string,
+        //     "days_left": string,
+        //     "uuid":string
+        //     })
+        //         localStorage.setItem("people_profile", JSON.stringify(people_profile));
+        //         alert("Successfully Posted :white_check_mark:");
+        //         window.location.href = "../home/3_home.html";
+        // };
 
         function form_1(e) {
           e.preventDefault();
-          const short_decp = document.getElementById("short_description").value;
-          const category = document.getElementById("category").value;
-          const title = document.getElementById("title").value;
-          const requester_name = document.getElementById("campaigner_name").value;
+          const short_decp = document.getElementById("short_description").value.trim();
+          const category = document.getElementById("category").value.trim();
+          const title = document.getElementById("title").value.trim();
+          const requester_name = document.getElementById("campaigner_name").value.trim();
 
           const form_1 = JSON.parse(localStorage.getItem("Request_list")) || [];
 
-          const exist =
-    form_1.length &&
-    JSON.parse(localStorage.getItem("Request_list")).some(
+          const exist =form_1.length && JSON.parse(localStorage.getItem("Request_list")).some(
       (data) => data.title.toLowerCase() == title.toLowerCase()
     );
           if (!exist) {

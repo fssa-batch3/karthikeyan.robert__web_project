@@ -154,7 +154,20 @@
         </footer>
    
         <script >
-// 
+
+            //user name
+
+            const userId = JSON.parse(localStorage.getItem("userId"));
+            const user_list = JSON.parse(localStorage.getItem("user_list"));
+
+            function login_data(e) {
+              return e.number == userId;
+            }
+            user_data = user_list.find(login_data);
+            document.querySelector("#user_name").innerText = user_data.name;
+
+
+// request cards
 
 const show_cart = JSON.parse(localStorage.getItem("Request_list"));
 
@@ -262,31 +275,37 @@ for (i = 0; i < show_cart.length; i++) {
   a_donate_btn.append(donate_btn);
 }
             //progressBAR
-            const progressval = 50;
-            const elm = document.getElementsByClassName("progressab")[0];
-            elm.style.width = `${progressval}%`;
 
-            elm.innerText = `${progressval}%`;
+            
 
-            if (progressval > 95 && progressval <= 100) {
-              elm.style.backgroundColor = "green";
-            } else if (progressval > 50 && progressval < 90) {
-              elm.style.backgroundColor = "tomato";
-            }
+            // let goal_amt = document.getElementById("goal").innerText;
 
-            const userId = JSON.parse(localStorage.getItem("userId"));
-            const user_list = JSON.parse(localStorage.getItem("user_list"));
 
-            function login_data(e) {
-              return e.number == userId;
-            }
-            user_data = user_list.find(login_data);
-            document.querySelector("#user_name").innerText = user_data.name;
+            // let colected_percentage=Math.floor((t_amount/goal_amt)*100);
+
+
+            // console.log(colected_percentage);
+
+
+
+            // const progressval = colected_percentage;
+            // const elm = document.getElementsByClassName("progressab")[0];
+            // elm.style.width = `${progressval}%`;
+
+            // elm.innerText = `${progressval}%`;
+
+            // if (progressval > 95 && progressval <= 100) {
+            //   elm.style.backgroundColor = "green";
+            // } else if (progressval > 50 && progressval < 90) {
+            //   elm.style.backgroundColor = "tomato";
+            // }
+
+            
 
     </script>
     
     </body>
-<a href="../project/After_login_pages/after_login_inside_profile/AL_inside_profile_1.html"></a>  
+
 
 
 </html>

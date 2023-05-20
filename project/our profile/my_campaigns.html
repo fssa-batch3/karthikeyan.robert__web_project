@@ -245,6 +245,18 @@
             a_donate_btn.append(donate_btn);
 
 
+            //user name
+
+            const userId = JSON.parse(localStorage.getItem("userId"));
+            const user_list = JSON.parse(localStorage.getItem("user_list"));
+
+            function login_data(e) {
+              return e.number == userId;
+            }
+            user_data = user_list.find(login_data);
+            document.querySelector("#user_name").innerText = user_data.name;
+
+
         }
     </script>
     </body>

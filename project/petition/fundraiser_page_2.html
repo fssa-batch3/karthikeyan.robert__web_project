@@ -80,7 +80,8 @@
                 <div class="Info">
             
                     <div class="Basic_info">
-                        Description<textarea class="basic input_option" id="descripition"> </textarea>
+                        Description
+                        <textarea class="basic input_option" id="descripition" margin-right="-100px";> </textarea>   
                     </div>
                     <div class="featured_image">
                         <lable class="image_title">Featured Image</lable>
@@ -150,8 +151,8 @@
         function fillForm2(e) {
           e.preventDefault();
         
-          const desc = document.getElementById("descripition").value;
-          const featImg = document.getElementById("customfile").value;
+          const desc = document.getElementById("descripition").value.trim();
+          const featImg = document.getElementById("customfile").value.trim();
 
           const form_1 = JSON.parse(localStorage.getItem("Request_list"));
 

@@ -23,24 +23,21 @@
         </div>
         <div class="profile_logo">
         
-            <div class="profile_name" id="user_name">
+            <div id="user_name" class="profile_name">
                 <!-- KARTHIKEYAN -->
             </div>
+            <!-- <a href="./our profile/our_profile.html"> -->
             <div class="logo_profile">
                 <div class="dropdown">
                     <img src="../../assets/images/user.png" alt="image" class="user_logo">
                     <div class="dropdown-content">
-                        <a href="../../our profile/Profile_edit_page.html">Edit profile</a>
+                        <a href="../../our profile/our_profile.html">profile</a>
                         <a href="../../../index.html">Log Out</a>
-              
+           
                     </div>
                 </div>
             </div>
-            <!-- <a href="../../our profile/our_profile.html">
-                <div class="logo_profile">
-                    <img src="../../assets/images/user.png" alt="image" class="user_logo">
-                </div>
-            </a> -->
+            <!-- </a> -->
     
         </div>
     
@@ -110,8 +107,8 @@
                             <p>
 
                                 ₹ 
-                                <b>
-                                0
+                                <b id="funded_amount">
+                                <!-- 0 -->
                                 </b>
                                  <b>
                                  raised of 
@@ -144,34 +141,33 @@
                                     <div class="amount_column">
 
                                         
-                                        <!-- <form id="donate_form"  > -->
-                                        <input type="number" id="amount_box" placeholder="Enter or Select an Amount" class="input_box">
+                                      
+                                        <input type="number" id="set_amount_box" placeholder="Enter or Select an Amount" class="input_box">
                                         <div class="row_four">
                                             <ul class="amount">
-                                                <li data-value="1000" class="amount_box_1">
+                                                <li data-value="1000" class="amount_box_1" id="get_amt_1" onclick="amtCallBtnOne()" >
                                                     <!-- <img src="../../assets/images/rupee.png" alt="image" class="amount_img" width="14px" height="14px">  -->
                                                    <b> ₹ 1000  </b>
                                                 </li>
-                                                <li data-value="3000" class="amount_box_2">
+                                                <li data-value="3000" class="amount_box_2" id="get_amt_2" onclick="amtCallBtnTwo()" >
                                                     <!-- <img src="../../assets/images/rupee.png" alt="image" class="amount_img" width="14px" height="14px">  -->
                                                 <b> ₹ 3000 </b>
                                                 </li>
-                                                <li  data-value="5000" class="amount_box_3">
+                                                <li  data-value="5000" class="amount_box_3" id="get_amt_3" onclick="amtCallBtnThree()">
                                                     <!-- <img src="../../assets/images/rupee.png" alt="image" class="amount_img" width="14px" height="14px"> -->
                                                 <b>  ₹ 5000 </b>
                                                 </li>
 
                                             </ul>
                             
-                                            <button class="contribute_button" type="submit">
+                                            <button class="contribute_button" type="submit" id="donateBTN" >
                                                 <b class="contribute">DONATE</b>
                                               </button>
                                               
 
                                             
                                         </div>   
-                                    <!-- </form>   -->
-
+                                    
                                     </div>
                                     <div class="row_five_para"> 
                                         <p id="short_description">
@@ -230,13 +226,30 @@
 
     <script>
 
+        //user name
+        const userId = JSON.parse(localStorage.getItem("userId"));
+            const user_list = JSON.parse(localStorage.getItem("user_list"));
+
+            function login_data(e) {
+              return e.number == userId;
+            }
+            user_data = user_list.find(login_data);
+            document.querySelector("#user_name").innerText = user_data.name;
+
         //inside profie
 
         const urlParams = new URLSearchParams(window.location.search);
         const puid = urlParams.get("puid");
 
-        let button = document.querySelector(".contribute_button");
-            button.setAttribute("onclick", `window.location.href = "../after_login_payment/AL_payment_1.html?puid=${puid}"`);
+        const user_id=JSON.parse(localStorage.getItem("userId"));
+
+        function showAmt(){
+        let total = document.getElementById("set_amount_box").value;
+        window.location.href = "../after_login_payment/AL_payment_1.html?puid=" + puid + "&amount=" + total;
+
+        }  
+
+
 
 
         let details = JSON.parse(localStorage.getItem("Request_list"));
@@ -255,72 +268,78 @@
         document.querySelector("h1#title_card").innerText = unique_detail[0]["title"];
         document.getElementById("short_description").innerText = unique_detail[0]["shortdecp"];
 
-        document.getElementById("category_type").innerText = unique_detail[0]["category"]
+        document.getElementById("category_type").innerText = unique_detail[0]["category"];
+
+        
+
+        //money option button
 
 
+        function amtCallBtnOne() {
+            document.getElementById("set_amount_box").value = "1000";
+        }
+        function amtCallBtnTwo() { 
+            document.getElementById("set_amount_box").value = "3000";
+        }
+        function amtCallBtnThree() {  
+            document.getElementById("set_amount_box").value = "5000";
+        }
 
-        //donate button
+        
+        //donate button 
 
+             document.getElementById("donateBTN").addEventListener("click",()=>{
+                showAmt();
 
-    //     function form_1(e) {
-    //       e.preventDefault();
-    //       const short_decp = document.getElementById("short_description").value;
-    //       const category = document.getElementById("category").value;
-    //       const title = document.getElementById("title").value;
-    //       const requester_name = document.getElementById("campaigner_name").value;
+            });
 
-    //       const form_1 = JSON.parse(localStorage.getItem("Request_list")) || [];
+          
+            // progress bar  
+             
+            const donateValue = JSON.parse(localStorage.getItem("donar_deatils")) ?? [];
+            
+            let t_amount = 0;
+            for(let i = 0; i<donateValue.length; i++){
 
-    //       const exist =
-    // form_1.length &&
-    // JSON.parse(localStorage.getItem("Request_list")).some(
-    //   (data) => data.title.toLowerCase() == title.toLowerCase()
-    // );
-    //       if (!exist) {
-    //         form_1.push({
-    //           shortdecp: short_decp,
-    //           category,
-    //           title,
-    //           req_name: requester_name,
-    //           Description: "",
-    //           "Featured Image": "",
-    //           Goal: "",
-    //           "End date": "",
-    //           "Campaign End Method": "",
-    //           colected_amt: 0,
-    //         });
-    //         localStorage.setItem("Request_list", JSON.stringify(form_1));
+                if(puid == donateValue[i]["DonateForId"])
+                t_amount += donateValue[i]["totalAmount"];
+                
 
-    //         console.log(localStorage.getItem("Request_list"));
+            }
+            document.getElementById("funded_amount").innerHTML = t_amount;
 
-    //         document.querySelector("form").reset();
+            console.log(t_amount);
 
-    //         document.getElementById("title").focus();
-
-    //         alert("form 1 completed");
-    //         location.href = "./fundraiser_page_2.html";
-    //       } else {
-    //         alert("Try with different title");
-    //         document.querySelector("form").reset();
-    //       }
-    //     }
+            
 
 
+            // for percentage
 
-            //amount
+            let goal_amt=document.getElementById("goal").innerText;
 
-                    const amount = document.querySelector(".input_box").value;
-                    let amount_total = 0;
-                    const total = amount_total;
-                    console.log(amount);
-                    function amountTotal() {
-                    amount_total += `${amount}`;
-                    localStorage.setItem("amountTotal", amount_total);
-                    }
-                    
-                    document
-                    .querySelector(".contribute_button")
-                    .addEventListener("click", amountTotal);
+
+            let colected_percentage=Math.floor((t_amount/goal_amt)*100);
+
+
+            console.log(colected_percentage);
+
+
+            // progress bar value 
+
+            const progressval = colected_percentage;
+            const elm = document.querySelectorAll(".progressab")[0];
+
+            elm.style.width = `${progressval}%`;
+
+            elm.innerText = `${progressval}%`;
+
+            if (progressval > 90 && progressval <= 100) {
+            elm.style.backgroundColor = "green";
+            } else if (progressval > 1 && progressval < 90) {
+            elm.style.backgroundColor = "tomato";
+            }
+
+
     </script>
 
 </body>

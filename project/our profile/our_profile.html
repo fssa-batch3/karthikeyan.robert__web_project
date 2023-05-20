@@ -23,16 +23,7 @@
             </div>
             <div class="profile_logo">
             
-                <!-- <div class="profile_name">
-                    KARTHIKEYAN
-                    </div>
-            
-                    <div class="logo_profile">
-                    <a href="./Profile_edit_page.html" class="profile_logo">
-                    <img src="../assets/images/user.png" alt="image" class="user_logo"/>
-                    </a>
-                
-                    </div> -->
+               
                 <div id="user_name" class="profile_name">
                     <!-- KARTHIKEYAN -->
                 </div>
@@ -41,8 +32,10 @@
                     <div class="dropdown">
                         <img src="../assets/images/user.png" alt="image" class="user_logo">
                         <div class="dropdown-content">
-                            <a href="../our profile/Profile_edit_page.html">Edit profile</a>
-                            <a href="#">Log Out</a>
+                            <a id="myButton">
+                                Edit profile  
+                            </a>
+                            <a href="../../index.html">Log Out</a>
                   
                         </div>
                     </div>
@@ -51,6 +44,63 @@
 
             </div>
         </div>  
+        <div id="myPopup" class="popup">
+            
+            <form class="form-horizontal popup-content">
+               
+                <div class="edit_profile_pop">
+
+                    <div class="edit_profile_font">
+                        EDIT PROFILE
+                    </div>
+                    
+                    <button class="close_btn">
+                        <img src="../assets/images/close.png" alt="image"
+                        class="close_btn_img" >
+                    </button>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Full name:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="text" 
+                            id="name" pattern="/[A-Za-z]{3,20}/" readonly required>
+                        <!-- <input type="text" id="textInput" required> -->
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Email:</label>
+                    <div class="col-lg-8">
+                        <input class="form-control" type="email" id="email" readonly required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Mobile Number:</label>
+                    <div class="col-md-8">
+                        <input class="form-control" type="number" id="number" readonly required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-3 control-label"></label>
+                    <div class="col-md-8">
+                        <input type="button" class="btn-primary button-79" value="Edit">
+                        <!-- <input type="submit" class="btn-secondary" value="submit"> -->
+                        <button type="submit" class="btn-secondary button-79">Submit</button>
+                        <span></span>
+                        <input type="reset" class="btn-teritary button-79" value="Delete">
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+
+
+
+
         <div class="header_2">
             <ul class="profile_head_2">
                 <a href="./our_profile.html" class=" profile_head_2">
@@ -184,15 +234,118 @@
         </footer>
 
         <script>
-    const userId = JSON.parse(localStorage.getItem("userId"));
-    const user_list = JSON.parse(localStorage.getItem("user_list"));
+        const userId = JSON.parse(localStorage.getItem("userId"));
+        const user_list = JSON.parse(localStorage.getItem("user_list"));
 
-    function login_data(e) {
-      return e.number == userId;
-    }
-    user_data = user_list.find(login_data);
-    document.querySelector("#user_name").innerText = user_data.name;
-    document.querySelector("#welcome_user_name").innerText = user_data.name;
+        function login_data(e) {
+        return e.number == userId;
+        }
+        user_data = user_list.find(login_data);
+        document.querySelector("#user_name").innerText = user_data.name;
+        document.querySelector("#welcome_user_name").innerText = user_data.name;
+
+
+        document.getElementById("name").value = user_data['name'];
+        document.getElementById("email").value = user_data['email'];
+        document.getElementById("number").value = user_data['number'];
+
+   
+
+        //EDIT popup
+
+       
+
+        // function login_data(e) {
+        //     return e.number == userId;
+        // }
+        // user_data = user_list.find(login_data);
+
+  
+
+        const sumbit = document.querySelector("form");
+        sumbit.addEventListener("submit", findReadonly1)
+
+        const save = document.querySelector(".btn-secondary")
+        save.addEventListener("click", saveUpdate)
+
+        function findReadonly(e) {
+            document.getElementById("name").removeAttribute("readonly");
+            // document.getElementById("name").setAttribute("required");
+            document.getElementById("email").removeAttribute("readonly");
+            // document.getElementById("email").setAttribute("required");
+
+        }
+        function findReadonly1(e) {
+            document.getElementById("name").setAttribute("readonly", "true");
+            document.getElementById("email").setAttribute("readonly", "true");
+        }
+        const editThing = document.querySelector(".btn-primary");
+        editThing.addEventListener("click", findReadonly);
+
+        function saveUpdate(e) {
+           
+            let user_name = document.getElementById("name").value.trim();
+            let user_email = document.getElementById("email").value.trim();
+
+            if(!user_name || !user_email){
+                alert("Please fill the input fields properly!!");
+            }
+            else{
+                user_data["name"] = user_name;
+            // user_data["number"] = user_number;
+            user_data["email"] = user_email;
+
+            localStorage.setItem('user_list', JSON.stringify(user_list));
+            alert("Updated successfully");
+            // window.location.href = "../Myprofile/6_profile.html"
+            // console.log(user_list);
+            e.preventDefault();
+            location.reload();
+            }
+
+        }
+
+        const dataDelete = document.querySelector(".btn-teritary");
+        dataDelete.addEventListener("click", delData)
+        function delData(e) {
+            if (confirm("Are you sure?")) {
+                let userId = JSON.parse(localStorage.getItem("userId"));
+                let user_list = JSON.parse(localStorage.getItem("user_list"));
+
+                function login_data(e) {
+                    return e.number == userId;
+                }
+
+                user_data = user_list.find(login_data);
+
+                const indexOfUser = user_list.indexOf(user_data);
+
+                user_list.splice(indexOfUser, 1);
+                localStorage.setItem('user_list', JSON.stringify(user_list));
+                // window.location.href = "../../index.html";
+            };
+        }
+
+        //user_name 
+
+        // function login_data(e) {
+        //     return e.number == userId;
+        // }
+        // user_data = user_list.find(login_data);
+        // document.querySelector("#user_name").innerText = user_data["name"];
+
+        myButton.addEventListener("click", function () {
+                myPopup.classList.add("show");
+            });
+            closePopup.addEventListener("click", function () {
+                myPopup.classList.remove("show");
+            });
+            window.addEventListener("click", function (event) {
+                if (event.target == myPopup) {
+                    myPopup.classList.remove("show");
+                }
+            });
+
 </script>
 
     </body>

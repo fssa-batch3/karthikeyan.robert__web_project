@@ -77,36 +77,37 @@
                 <div class="right_row_two">
                 <div class="row_two" >
                     
-                <b id="category_type">
+                    <b id="category_type">
+                        #
+                         <!-- Medical Causes -->
+                        </b>
                     
-                     <!-- Medical Causes -->
-                    </b>
-
                 </div>
                 <div class="row_three"> 
-                <p>
+                    <p>
 
-                    <img src="../assets/images/rupee.png" alt="image" class="" width="14px" height="14px" /> 
+                        ₹ 
+                        <b id="funded_amount">
+                        <!-- 0 -->
+                        </b>
+                         <b>
+                         raised of 
+                        </b>
+                        ₹ 
+                    
+                    <b id="goal"> 
+                     <!-- 3000000 -->
+                    </b>
                     <b>
-                    0
+                        Goal
                     </b>
-                     <b>
-                     raised of 
-                    </b>
-                <img src="../assets/images/rupee.png" alt="image" class="" width="14px" height="14px" />
-                <b id="goal"> 
-                 <!-- 3000000 -->
-                </b>
-                <b>
-                    Goal
-                </b>
-            </p>
+                </p>
 
                 </div>
             
                 <div>
                     <div class="progressa">
-                        <div class="progressab" style="    background-color: rgb(178, 222, 75);">
+                        <div class="progressab" style="background-color: rgb(178, 222, 75);">
                         </div>
                         </div>
                 </div>
@@ -121,18 +122,21 @@
                 <div class="right_row_three">
                 <h2 class="h2_contribute">Contribute</h2>
                 <div class="amount_column">
-                <input type="number"  placeholder="Enter or Select an Amount" class="input_box" />
+                    <input type="number" id="set_amount_box" placeholder="Enter or Select an Amount" class="input_box">
                 <div class="row_four">
                 <ul class="amount">
-                <li class="amount_box_1">
-                <img src="../assets/images/rupee.png" alt="image" class="amount_img" width="14px" height="14px" /> 1000
-                </li>
-                <li class="amount_box_2">
-                <img src="../assets/images/rupee.png" alt="image" class="amount_img" width="14px" height="14px" /> 3000
-                </li>
-                <li class="amount_box_3">
-                <img src="../assets/images/rupee.png" alt="image" class="amount_img" width="14px" height="14px" /> 5000
-                </li>
+                    <li data-value="1000" class="amount_box_1" id="get_amt_1" onclick="amtCallBtnOne()" >
+                        <!-- <img src="../../assets/images/rupee.png" alt="image" class="amount_img" width="14px" height="14px">  -->
+                       <b> ₹ 1000  </b>
+                    </li>
+                    <li data-value="3000" class="amount_box_2" id="get_amt_2" onclick="amtCallBtnTwo()" >
+                        <!-- <img src="../../assets/images/rupee.png" alt="image" class="amount_img" width="14px" height="14px">  -->
+                    <b> ₹ 3000 </b>
+                    </li>
+                    <li  data-value="5000" class="amount_box_3" id="get_amt_3" onclick="amtCallBtnThree()">
+                        <!-- <img src="../../assets/images/rupee.png" alt="image" class="amount_img" width="14px" height="14px"> -->
+                    <b>  ₹ 5000 </b>
+                    </li>
 
                 </ul>
                             
@@ -204,45 +208,6 @@
         
         
         
-//         const heading = [
-//           {
-//             title: "Help Sportsman Adithya Who Was Stabbed Multiple Times",
-//             about: "../inside profile/Inside_profile_1.html",
-//   },
-// ];
-
-// h1_heading = document.createElement("h1");
-// h1_heading.setAttribute("class", "heading");
-// h1_heading.innerText = heading[0].title;
-// console.log(h1_heading);
-// document.querySelector("section.profile_heading").append(h1_heading);
-
-// h2_heading = document.createElement("h2");
-// h2_heading.setAttribute("class", "heading");
-// console.log(h1_heading);
-// document.querySelector("section.profile_heading").append(h2_heading);
-
-// ul_backers_count = document.createElement("ul");
-// ul_backers_count.setAttribute("class", "backers_count");
-// h2_heading.append(ul_backers_count);
-
-// a_about_backers = document.createElement("a");
-// a_about_backers.setAttribute("class","about_backer");
-// a_about_backers.setAttribute("href",heading[0].about);
-// ul_backers_count.append(a_about_backers);
-
-// li_inneText
-
-
-
-
-
-// div_profile = document.createElement("div");
-// div_profile.setAttribute("class", "profile");
-// console.log(div_profile);
-// document.querySelector("section.profile").append(div_profile);
-
-// const amount = document;
 
         const urlParams = new URLSearchParams(window.location.search);
         const puid = urlParams.get("puid");
@@ -262,7 +227,66 @@
         document.querySelector("h1#title_card").innerText = unique_detail[0]["title"];
         document.getElementById("short_description").innerText = unique_detail[0]["shortdecp"];
 
-        document.getElementById("category_type").innerText = unique_detail[0]["category"]
+        document.getElementById("category_type").innerText = unique_detail[0]["category"];
+    
+
+        //money option button
+
+
+        function amtCallBtnOne() {
+            document.getElementById("set_amount_box").value = "1000";
+        }
+        function amtCallBtnTwo() { 
+            document.getElementById("set_amount_box").value = "3000";
+        }
+        function amtCallBtnThree() {  
+            document.getElementById("set_amount_box").value = "5000";
+        }
+          
+            // progress bar  
+             
+            const donateValue = JSON.parse(localStorage.getItem("donar_deatils")) ?? [];
+            
+            let t_amount = 0;
+            for(let i = 0; i<donateValue.length; i++){
+
+                if(puid == donateValue[i]["DonateForId"])
+                t_amount += donateValue[i]["totalAmount"];
+            }
+            document.getElementById("funded_amount").innerHTML = t_amount;
+
+            console.log(t_amount);
+
+            
+
+
+            // for percentage
+
+            let goal_amt=document.getElementById("goal").innerText;
+
+
+            let colected_percentage=Math.floor((t_amount/goal_amt)*100);
+
+
+            console.log(colected_percentage);
+
+
+            // progress bar value 
+
+            const progressval = colected_percentage;
+            const elm = document.querySelectorAll(".progressab")[0];
+
+            elm.style.width = `${progressval}%`;
+
+            elm.innerText = `${progressval}%`;
+
+            if (progressval > 90 && progressval <= 100) {
+            elm.style.backgroundColor = "green";
+            } else if (progressval > 1 && progressval < 90) {
+            elm.style.backgroundColor = "tomato";
+            }
+
+
 
 
 

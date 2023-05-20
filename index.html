@@ -264,7 +264,19 @@ for (i = 0; i < show_cart.length; i++) {
 
 //progress bar
 
-const progressval = 88;
+
+            let goal_amt=document.getElementById("goal").innerText;
+
+
+            let colected_percentage=Math.floor((t_amount/goal_amt)*100);
+
+
+            console.log(colected_percentage);
+
+
+            
+
+const progressval = colected_percentage;
 const elm = document.querySelectorAll(".progressab")[0];
 
 elm.style.width = `${progressval}%`;
@@ -276,6 +288,9 @@ if (progressval > 90 && progressval <= 100) {
 } else if (progressval > 1 && progressval < 90) {
   elm.style.backgroundColor = "tomato";
 }
+
+
+//  
 
 const userId = JSON.parse(localStorage.getItem("userId"));
 const user_list = JSON.parse(localStorage.getItem("user_list"));
