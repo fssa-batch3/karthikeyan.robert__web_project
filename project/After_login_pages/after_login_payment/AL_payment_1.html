@@ -308,28 +308,66 @@
 
 
             
-        function donatedDetailsTwo(e) {
-            e.preventDefault();
-            const donateValue = JSON.parse(localStorage.getItem("donar_deatils")) || [];
+        // function donatedDetailsTwo(e) {
+        //     e.preventDefault();
+        //     const donateValue = JSON.parse(localStorage.getItem("donar_deatils")) || [];
 
-                const name = document.getElementById("dName").value.trim();
-                const email = document.getElementById("dEmail").value.trim();
-                const phone = document.getElementById("dPhone").value.trim();
-                const show_name = document.getElementById("show_name_yes").checked;
-                const totalAmount = document.getElementById("totalAmount").value = amt + finalPercentage;   
-                        donateValue.push({ 
-                        name,
-                        email,
-                        phone,
-                        show_name,
-                        totalAmount,
-                        "user_id":userId,
-                        "DonateForId":puid,   
-                    })
-          localStorage.setItem("donar_deatils", JSON.stringify(donateValue));
-          alert("completed");
-        //   window.location.href = "#";
+        //         const name = document.getElementById("dName").value.trim();
+        //         const email = document.getElementById("dEmail").value.trim();
+        //         const phone = document.getElementById("dPhone").value.trim();
+        //         const show_name = document.getElementById("show_name_yes").checked;
+        //         const totalAmount = document.getElementById("totalAmount").value = amt + finalPercentage;
+
+        //         if(name.value === "" || email.value ==="" || phone.value === ""){   
+        //            alert("Please fil the deatils !");
+        //         } 
+        //         else {
+        //                 donateValue.push({ 
+        //                 name,
+        //                 email,
+        //                 phone,
+        //                 show_name,
+        //                 totalAmount,
+        //                 "user_id":userId,
+        //                 "DonateForId":puid,   
+        //             })
+        //         }
+                    
+        //   localStorage.setItem("donar_deatils", JSON.stringify(donateValue));
+        //   alert("completed");
+        //   window.location.href = "../../our profile/our_profile.html";
+        // }
+        function donatedDetailsTwo(e) {
+        e.preventDefault();
+        const donateValue = JSON.parse(localStorage.getItem("donar_deatils")) || [];
+
+        const name = document.getElementById("dName").value.trim();
+        const email = document.getElementById("dEmail").value.trim();
+        const phone = document.getElementById("dPhone").value.trim();
+        const show_name = document.getElementById("show_name_yes").checked;
+        const totalAmount = document.getElementById("totalAmount").value = amt + finalPercentage;   
+
+        if (name === "" || email === "" || phone === "") {
+            alert("Please fill in the details!");
+        } 
+        else {
+            donateValue.push({
+            name: name,
+            email: email,
+            phone: phone,
+            show_name: show_name,
+            totalAmount: totalAmount,
+            user_id: userId,
+            DonateForId: puid,
+            });
+            localStorage.setItem("donar_deatils", JSON.stringify(donateValue));
+            alert("Completed!");
+            window.location.href = "../../our profile/our_profile.html";
         }
+
+       
+        }
+
 
 
                
@@ -357,5 +395,6 @@
         </script>
 
     </body>
+    
 
 </html>

@@ -142,7 +142,8 @@
 
                                         
                                       
-                                        <input type="number" id="set_amount_box" placeholder="Enter or Select an Amount" class="input_box">
+                                        <input type="number" id="set_amount_box" placeholder="Enter or Select an Amount" class="input_box" >
+                                        <!-- pattern="{1,1000000000000}" -->
                                         <div class="row_four">
                                             <ul class="amount">
                                                 <li data-value="1000" class="amount_box_1" id="get_amt_1" onclick="amtCallBtnOne()" >
@@ -271,6 +272,25 @@
         document.getElementById("category_type").innerText = unique_detail[0]["category"];
 
         
+        //money selection input 
+
+        function donateBTN(){
+
+        const input_amt =  document.getElementById("set_amount_box").value;
+                if (input_amt >= 50 && input_amt <= 9999999999) {
+            // window.location.reload();
+            } 
+            else{
+            alert("min amount to be donated is 50");
+            window.location.reload();
+            }
+    }
+        // console.log(input_amt)
+        // else if (input_amt <= 50) {
+        // alert("min amount to be donated is 50");
+        // window.location.reload();
+        // }   
+
 
         //money option button
 
@@ -290,7 +310,8 @@
 
              document.getElementById("donateBTN").addEventListener("click",()=>{
                 showAmt();
-
+                // input_amt();
+                donateBTN();
             });
 
           

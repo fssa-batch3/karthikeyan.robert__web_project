@@ -94,6 +94,7 @@
                             autocomplete="off"   
                             required 
                             placeholder="write short description min characters = 100, max characters = 200"
+                            value="Yogakshetram is a traditional lifestyle project. With hundreds of Ayurvedic herbs around, a Gaushala of indigenous cow breeds, and natural farming, Yogakshetram is planning to build Shiva Temple in traditional style. Please donate. Om Namah Shivaay"
                         ></textarea>
                     </div>
                     <div class="Basic_info">
@@ -117,6 +118,7 @@
                             class="title input_option" 
                             id="title" 
                             pattern="{3,200}"
+                            
                         >
                         <!-- [A-Za-z\s] -->
                     </div>
@@ -128,6 +130,7 @@
                             class="name input_option" 
                             id="campaigner_name" 
                             pattern="[A-Za-z\s]{3,20}"
+                            
                         >
 
                     </div>
@@ -182,6 +185,18 @@
         </footer>
 
         <script>
+
+            //user name
+            const userId = JSON.parse(localStorage.getItem("userId"));
+            const user_list = JSON.parse(localStorage.getItem("user_list"));
+
+            function login_data(e) {
+              return e.number == userId;
+            }
+            user_data = user_list.find(login_data);
+            document.querySelector("#user_name").innerText = user_data.name;
+
+
         // function publish(){
         // let post_title = document.getElementById("title").value;
         // let post_subtitle = document.getElementById("sub_title").value;
