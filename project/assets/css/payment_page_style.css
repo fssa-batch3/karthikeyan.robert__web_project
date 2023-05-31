@@ -28,8 +28,8 @@
     height: 34px;
     font-size: larger;
     border: 2px solid black;
-    color:white;
-    background-color: orange;
+    color:black;
+    background-color:  #d9d4d4d2;
 }
 .right_row_3{
     display: flex;
@@ -97,4 +97,12 @@
     height: 30px;
     margin-left: 20px;
     border:1px solid gray;
+}
+.amount_symbol{
+    margin-left: 80px;
+    margin-right: 5px;
+}
+.Total_amount_symbol{
+    margin-left: 220px;
+   
 }

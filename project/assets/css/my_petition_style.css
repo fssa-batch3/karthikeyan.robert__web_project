@@ -29,10 +29,6 @@
     margin-top: 8px;
 
 }
-.dashboard{
-    padding-left: 10%;
-    padding-right: 10%;
-}
 .welcome_name{
     color: grey;
 
@@ -61,4 +57,12 @@
 
 .footer{
     margin-top: 500px;
+}
+
+.profiles_row_one {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid black;  
+    margin-right: 6%;  
 }
