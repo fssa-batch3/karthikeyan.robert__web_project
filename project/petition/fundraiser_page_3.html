@@ -86,7 +86,7 @@
                     </div>
                     <div class="Basic_info">
                         End date 
-                        <input placeholder id="end_date" value aria-invalid="false" class="title input_option">
+                        <input type="date" placeholder id="end_date" value aria-invalid="false" class="title input_option">
 
                     </div>
                     <div class="end_method Basic_info">
@@ -172,10 +172,10 @@
         
         <script>function fillForm3(e) {
           e.preventDefault();
-          const Goal = document.getElementById("goal_achived").value;
-          const endDate = document.getElementById("end_date").value;
-          const goalEndRatio = document.getElementById("after_g_achived").value;
-          const endDateRatio = document.getElementById("after_e_date").value;
+          const Goal = document.getElementById("goal_achived").value.trim();
+          const endDate = document.getElementById("end_date").value.trim();
+          const goalEndRatio = document.getElementById("after_g_achived").value.trim();
+          const endDateRatio = document.getElementById("after_e_date").value.trim();
           const uuid = uuidv4();
 
           //  console.log(Goal,endDate,goalEndRatio,endDateRatio)

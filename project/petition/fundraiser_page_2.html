@@ -80,13 +80,16 @@
                 <div class="Info">
             
                     <div class="Basic_info">
-                        Description<textarea class="basic input_option" id="descripition"> </textarea>
+                        Description
+                        <textarea class="basic input_option" id="descripition" margin-right="-100px";> </textarea>   
                     </div>
                     <div class="featured_image">
                         <lable class="image_title">Featured Image</lable>
                         <div class="image_button">
                     
                             <input placeholder="choose an image" type="url" name="featured_image" class="choose_image  title input_option" id="customfile" accept="image/*">
+                            <!-- value="https://www.crowdkash.com/uploads/images/1638536539dhy33-5e5b8399-ec62-4be8-a635-eb24a724099a.jpeg"  -->
+                            
                         </div>    
 
                     </div>
@@ -150,8 +153,8 @@
         function fillForm2(e) {
           e.preventDefault();
         
-          const desc = document.getElementById("descripition").value;
-          const featImg = document.getElementById("customfile").value;
+          const desc = document.getElementById("descripition").value.trim();
+          const featImg = document.getElementById("customfile").value.trim();
 
           const form_1 = JSON.parse(localStorage.getItem("Request_list"));
 
